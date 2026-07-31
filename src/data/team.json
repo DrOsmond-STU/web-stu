@@ -1,0 +1,7 @@
+[
+  { "name": "David R Osmond, S.E.", "position": "Direktur", "photo": "/images/team/t1.jpg", "bio": "Memimpin arah bisnis dan kemitraan strategis perusahaan sejak didirikan pada 2020.", "sort_order": 1 },
+  { "name": "Hendra Purnama, S.Kom.", "position": "Manajer Teknologi", "photo": "/images/team/t2.jpg", "bio": "Bertanggung jawab atas arsitektur sistem dan mutu pengembangan aplikasi.", "sort_order": 2 },
+  { "name": "Arizky, S.Kom.", "position": "Konsultan Sistem Manajemen", "photo": "/images/team/t3.jpg", "bio": "Mendampingi klien pada implementasi dan sertifikasi ISO 9001, 27001, dan 20000-1.", "sort_order": 3 },
+  { "name": "Fajri Adi S, S.Kom.", "position": "Pengembang Aplikasi", "photo": "/images/team/t4.jpg", "bio": "Menangani pengembangan aplikasi web dan integrasi antar sistem.", "sort_order": 4 },
+  { "name": "Darmawan S, S.Kom.", "position": "Spesialis Infrastruktur & Jaringan", "photo": "/images/team/t5.jpg", "bio": "Merancang dan memelihara infrastruktur jaringan serta perangkat pendukung klien.", "sort_order": 5 }
+]

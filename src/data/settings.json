@@ -1,0 +1,181 @@
+[
+  { "key": "site_name", "value": "Semesta Teknologi Utama", "group": "identitas", "label": "Nama Website", "type": "text" },
+  { "key": "company_name", "value": "CV. SEMESTA TEKNOLOGI UTAMA", "group": "identitas", "label": "Nama Lengkap Perusahaan", "type": "text" },
+  { "key": "company_short", "value": "STU", "group": "identitas", "label": "Singkatan Perusahaan", "type": "text" },
+  { "key": "tagline", "value": "Digital Business & Technology Solutions", "group": "identitas", "label": "Tagline", "type": "text" },
+  { "key": "logo", "value": "/images/brand/logo-horizontal.png", "group": "identitas", "label": "Logo Utama (horizontal)", "type": "image" },
+  { "key": "logo_mark", "value": "/images/brand/logo-mark.png", "group": "identitas", "label": "Logo Ikon (persegi)", "type": "image" },
+  { "key": "founded_year", "value": "2020", "group": "identitas", "label": "Tahun Berdiri", "type": "text" },
+  { "key": "legal_akta", "value": "Akta Pendirian Nomor 151 Tahun 2020 — Notaris Nurlisa Uke Desy, S.H., M.Kn.", "group": "identitas", "label": "Akta Pendirian", "type": "text" },
+  { "key": "legal_nib", "value": "0220207232509", "group": "identitas", "label": "Nomor NIB", "type": "text" },
+  { "key": "legal_siup", "value": "0220207232509 Tahun 2020", "group": "identitas", "label": "Nomor Surat Izin Usaha", "type": "text" },
+  { "key": "legal_npwp", "value": "94.389.552.4-017.000", "group": "identitas", "label": "Nomor NPWP", "type": "text" },
+  {
+    "key": "kbli_list",
+    "value": "46491 — Perdagangan Besar Peralatan dan Perlengkapan Rumah Tangga\n46511 — Perdagangan Besar Komputer dan Perlengkapan Komputer\n46512 — Perdagangan Besar Piranti Lunak\n62019 — Aktivitas Pemrograman Komputer Lainnya\n62029 — Aktivitas Konsultasi Komputer dan Manajemen Fasilitas Komputer Lainnya\n63122 — Portal Web dan/atau Platform Digital dengan Tujuan Komersial\n70209 — Aktivitas Konsultasi Manajemen Lainnya",
+    "group": "identitas",
+    "label": "Daftar Bidang Usaha (KBLI)",
+    "type": "textarea",
+    "hint": "Satu bidang usaha per baris."
+  },
+
+  {
+    "key": "whatsapp_number",
+    "value": "628123456789",
+    "group": "kontak",
+    "label": "Nomor WhatsApp",
+    "type": "text",
+    "hint": "Format internasional tanpa tanda + dan tanpa spasi. Contoh: 6281234567890"
+  },
+  {
+    "key": "whatsapp_greeting",
+    "value": "Halo! 👋 Selamat datang di Semesta Teknologi Utama. Ada yang bisa kami bantu terkait kebutuhan teknologi informasi Anda?",
+    "group": "kontak",
+    "label": "Sapaan Awal Widget WhatsApp",
+    "type": "textarea"
+  },
+  {
+    "key": "whatsapp_default_message",
+    "value": "Halo Semesta Teknologi Utama, saya ingin berkonsultasi mengenai layanan Anda.",
+    "group": "kontak",
+    "label": "Pesan Otomatis Saat Chat Dibuka",
+    "type": "textarea"
+  },
+  {
+    "key": "whatsapp_quick_replies",
+    "value": "Saya ingin konsultasi pembuatan aplikasi\nSaya butuh pendampingan sertifikasi ISO\nSaya ingin minta penawaran harga\nSaya ingin tahu portofolio proyek Anda",
+    "group": "kontak",
+    "label": "Pilihan Pesan Cepat",
+    "type": "textarea",
+    "hint": "Satu pilihan per baris. Tampil sebagai tombol di widget chat."
+  },
+  { "key": "whatsapp_agent_name", "value": "Tim Semesta Teknologi Utama", "group": "kontak", "label": "Nama Agen di Widget Chat", "type": "text" },
+  { "key": "whatsapp_agent_role", "value": "Biasanya membalas dalam beberapa menit", "group": "kontak", "label": "Keterangan Agen", "type": "text" },
+  { "key": "contact_email", "value": "info@semestateknologiutama.com", "group": "kontak", "label": "Email Utama", "type": "text" },
+  { "key": "contact_phone", "value": "+62 812-3456-789", "group": "kontak", "label": "Nomor Telepon", "type": "text" },
+  {
+    "key": "address",
+    "value": "Conclave Simatupang, Kawasan Komersial Cilandak No. 410, Jalan Cilandak KKO, Cilandak Timur, Pasar Minggu, Jakarta Selatan, DKI Jakarta 12560",
+    "group": "kontak",
+    "label": "Alamat Kantor",
+    "type": "textarea"
+  },
+  { "key": "office_hours", "value": "Senin – Jumat, 08.30 – 17.30 WIB", "group": "kontak", "label": "Jam Operasional", "type": "text" },
+  {
+    "key": "map_embed",
+    "value": "https://www.google.com/maps?q=Conclave%20Simatupang%20Cilandak%20Jakarta&output=embed",
+    "group": "kontak",
+    "label": "URL Peta (embed)",
+    "type": "text",
+    "hint": "Ambil dari Google Maps → Bagikan → Sematkan peta, lalu salin URL di dalam atribut src."
+  },
+
+  { "key": "hero_eyebrow", "value": "Digital Business Company", "group": "beranda", "label": "Label Kecil di Atas Judul", "type": "text" },
+  { "key": "hero_title", "value": "Solusi Teknologi Informasi yang Tumbuh Bersama Bisnis Anda", "group": "beranda", "label": "Judul Utama Hero", "type": "text" },
+  {
+    "key": "hero_subtitle",
+    "value": "Kami merancang, membangun, dan memelihara sistem informasi untuk instansi pemerintah dan perusahaan di Indonesia — dari pengembangan aplikasi khusus hingga pendampingan sertifikasi ISO.",
+    "group": "beranda",
+    "label": "Deskripsi Hero",
+    "type": "textarea"
+  },
+  { "key": "hero_cta_primary_text", "value": "Konsultasi Gratis", "group": "beranda", "label": "Teks Tombol Utama", "type": "text" },
+  { "key": "hero_cta_primary_link", "value": "/kontak", "group": "beranda", "label": "Tautan Tombol Utama", "type": "text" },
+  { "key": "hero_cta_secondary_text", "value": "Lihat Portofolio", "group": "beranda", "label": "Teks Tombol Kedua", "type": "text" },
+  { "key": "hero_cta_secondary_link", "value": "/proyek", "group": "beranda", "label": "Tautan Tombol Kedua", "type": "text" },
+  {
+    "key": "hero_slides",
+    "value": "[\n  {\n    \"image\": \"/images/hero/city-2.jpg\",\n    \"eyebrow\": \"Digital Business Company\",\n    \"title\": \"Solusi Teknologi Informasi yang Tumbuh Bersama Bisnis Anda\",\n    \"subtitle\": \"Kami merancang, membangun, dan memelihara sistem informasi untuk instansi pemerintah dan perusahaan di Indonesia.\"\n  },\n  {\n    \"image\": \"/images/hero/analytics.jpg\",\n    \"eyebrow\": \"Custom Application Development\",\n    \"title\": \"Aplikasi Dibangun Sesuai Proses Bisnis Anda\",\n    \"subtitle\": \"Dari ERP, dokumen manajemen, hingga portal layanan publik — dirancang khusus, bukan sekadar produk jadi.\"\n  },\n  {\n    \"image\": \"/images/docs/doc-05.jpg\",\n    \"eyebrow\": \"Implementasi & Sertifikasi ISO\",\n    \"title\": \"Pendampingan ISO 9001, 27001 & 20000-1\",\n    \"subtitle\": \"Telah mendampingi Kementerian Dalam Negeri, Kementerian Agama, dan pemerintah daerah menuju sertifikasi.\"\n  },\n  {\n    \"image\": \"/images/hero/handshake.jpg\",\n    \"eyebrow\": \"Service & Maintenance\",\n    \"title\": \"Sistem yang Dirawat, Bukan Sekadar Dibangun\",\n    \"subtitle\": \"Filosofi kami: “Sistem yang memelihara”. Setiap sistem kami rawat seperti makhluk hidup hingga mandiri.\"\n  }\n]",
+    "group": "beranda",
+    "label": "Slide Hero (JSON)",
+    "type": "json",
+    "hint": "Daftar slide berisi image, eyebrow, title, subtitle."
+  },
+  {
+    "key": "stats",
+    "value": "[\n  { \"value\": \"25+\", \"label\": \"Proyek Diselesaikan\", \"hint\": \"Instansi pemerintah & swasta\" },\n  { \"value\": \"5\", \"label\": \"Tahun Pengalaman\", \"hint\": \"Sejak 2020\" },\n  { \"value\": \"15+\", \"label\": \"Klien Institusi\", \"hint\": \"Kementerian & korporasi\" },\n  { \"value\": \"3\", \"label\": \"Standar ISO\", \"hint\": \"9001 · 27001 · 20000-1\" }\n]",
+    "group": "beranda",
+    "label": "Statistik Beranda (JSON)",
+    "type": "json"
+  },
+  { "key": "cta_title", "value": "Siap mengubah proses bisnis Anda menjadi digital?", "group": "beranda", "label": "Judul Ajakan Bertindak", "type": "text" },
+  {
+    "key": "cta_subtitle",
+    "value": "Ceritakan kebutuhan Anda kepada tim kami. Konsultasi awal gratis, tanpa ikatan apa pun.",
+    "group": "beranda",
+    "label": "Deskripsi Ajakan Bertindak",
+    "type": "textarea"
+  },
+
+  {
+    "key": "about_intro",
+    "value": "Perkembangan Teknologi Informasi saat ini sangat cepat dan luas. Semua bidang usaha membutuhkan TI sebagai sumber daya pendukung yang mampu meningkatkan efektivitas dan efisiensi kerja perusahaan.",
+    "group": "tentang",
+    "label": "Paragraf Pembuka",
+    "type": "textarea"
+  },
+  {
+    "key": "about_body",
+    "value": "Kebutuhan akan Teknologi Informasi bukan hanya sebatas perangkat keras dan perangkat lunak penyimpanan data, tetapi sudah menjadi bagian dari pola kerja keseharian perusahaan — seperti surat-menyurat elektronik dan otomasi sistem kerja perusahaan.\n\nDengan meningkatnya kebutuhan akan TI, aspek keamanan dari TI itu sendiri pun meningkat dan menjadi sesuatu yang harus dipikirkan dalam membentuk infrastruktur TI yang baik, sesuai dengan visi dan misi serta sistem kerja perusahaan.\n\nCV. Semesta Teknologi Utama hadir sebagai mitra yang tidak hanya menawarkan jasa dan produk jadi, tetapi memberikan **solusi menyeluruh** di bidang layanan Teknologi Informasi bagi kebutuhan usaha klien.",
+    "group": "tentang",
+    "label": "Isi Tentang Kami",
+    "type": "markdown"
+  },
+  { "key": "about_image", "value": "/images/hero/meeting.jpg", "group": "tentang", "label": "Gambar Tentang Kami", "type": "image" },
+  {
+    "key": "vision",
+    "value": "Menjadi perusahaan Teknologi Informasi terbaik di Indonesia yang tidak hanya menawarkan jasa & produk jadi, namun memberikan solusi di bidang layanan Teknologi Informasi bagi kebutuhan usaha klien.",
+    "group": "tentang",
+    "label": "Visi Perusahaan",
+    "type": "textarea"
+  },
+  {
+    "key": "mission",
+    "value": "Memberikan kepuasan pelayanan jasa informasi yang inovatif, efektif, dan kompeten.",
+    "group": "tentang",
+    "label": "Misi Perusahaan",
+    "type": "textarea"
+  },
+  {
+    "key": "values",
+    "value": "[\n  {\n    \"title\": \"Kebersamaan\",\n    \"icon\": \"users\",\n    \"text\": \"Kami tumbuh bersama sejak langkah pertama. Di dalam kesedihan dan kebahagiaan, kami telah melalui semuanya bersama-sama sehingga dapat tumbuh sampai sekarang.\"\n  },\n  {\n    \"title\": \"Kejujuran\",\n    \"icon\": \"shield\",\n    \"text\": \"Kami memupuk keterusterangan di tempat kerja. Setelah kita menipu, semua kepercayaan yang telah dibangun akan hilang — dan kehilangan kepercayaan berarti kematian bagi bisnis kami.\"\n  },\n  {\n    \"title\": \"Amanat\",\n    \"icon\": \"sprout\",\n    \"text\": \"Filosofi kami: “Sistem yang memelihara”, bukan sekadar “mengembangkan sistem”. Sistem tumbuh seperti makhluk hidup dan perlu dipupuk, seperti mengurus bayi hingga ia dapat mandiri.\"\n  },\n  {\n    \"title\": \"Profesional\",\n    \"icon\": \"award\",\n    \"text\": \"Kami melakukan semua kegiatan teknis dan non-teknis secara maksimal sesuai kompetensi, sebagai tanggung jawab kepada perusahaan dan para pelanggan kami.\"\n  }\n]",
+    "group": "tentang",
+    "label": "Nilai Perusahaan (JSON)",
+    "type": "json"
+  },
+
+  {
+    "key": "seo_title",
+    "value": "Semesta Teknologi Utama — Jasa Pengembangan Aplikasi & Konsultan ISO Jakarta",
+    "group": "seo",
+    "label": "Judul Meta Beranda",
+    "type": "text",
+    "hint": "Idealnya 50–60 karakter agar tidak terpotong di hasil pencarian Google."
+  },
+  {
+    "key": "seo_description",
+    "value": "CV. Semesta Teknologi Utama adalah perusahaan teknologi informasi di Jakarta yang melayani pengembangan aplikasi khusus, desain jaringan, service & maintenance, serta pendampingan implementasi dan sertifikasi ISO 9001, 27001, dan 20000-1.",
+    "group": "seo",
+    "label": "Deskripsi Meta Beranda",
+    "type": "textarea",
+    "hint": "Idealnya 150–160 karakter."
+  },
+  {
+    "key": "seo_keywords",
+    "value": "jasa pembuatan aplikasi jakarta, konsultan ISO 27001, sertifikasi ISO 9001, pengembangan sistem informasi, perusahaan IT jakarta, document management system, jasa maintenance jaringan",
+    "group": "seo",
+    "label": "Kata Kunci",
+    "type": "textarea",
+    "hint": "Pisahkan dengan koma."
+  },
+  { "key": "seo_og_image", "value": "/images/hero/city-2.jpg", "group": "seo", "label": "Gambar Bagikan (Open Graph)", "type": "image" },
+  { "key": "seo_google_verification", "value": "", "group": "seo", "label": "Kode Verifikasi Google Search Console", "type": "text", "hint": "Isi hanya kode di dalam atribut content, bukan seluruh tag meta." },
+  { "key": "seo_bing_verification", "value": "", "group": "seo", "label": "Kode Verifikasi Bing Webmaster", "type": "text" },
+  { "key": "seo_ga_id", "value": "", "group": "seo", "label": "ID Google Analytics (G-XXXXXXX)", "type": "text" },
+
+  { "key": "social_linkedin", "value": "", "group": "sosial", "label": "LinkedIn", "type": "text" },
+  { "key": "social_instagram", "value": "", "group": "sosial", "label": "Instagram", "type": "text" },
+  { "key": "social_facebook", "value": "", "group": "sosial", "label": "Facebook", "type": "text" },
+  { "key": "social_youtube", "value": "", "group": "sosial", "label": "YouTube", "type": "text" },
+  { "key": "social_github", "value": "https://github.com/DrOsmond-STU", "group": "sosial", "label": "GitHub", "type": "text" }
+]

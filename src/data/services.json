@@ -1,0 +1,70 @@
+[
+  {
+    "slug": "custom-application-development",
+    "title": "Custom Application Development & Produk Aplikasi",
+    "summary": "Pengembangan aplikasi sesuai kebutuhan spesifik perusahaan, ditambah produk aplikasi bisnis siap pakai.",
+    "description": "Merupakan pengembangan aplikasi sesuai dengan kebutuhan spesifik perusahaan yang cenderung unik atau khusus, sehingga produk yang ada di pasaran tidak dapat — atau sulit — dimodifikasi untuk memenuhi kebutuhan tersebut.\n\nSelain itu kami juga menyediakan aplikasi produk, yaitu produk aplikasi bisnis yang sudah siap pakai. Saat ini kami telah memiliki sejumlah produk aplikasi siap pakai untuk usaha retail maupun hospitality, dokumen manajemen, ERP, hingga analitik data.",
+    "icon": "code",
+    "image": "/images/apps/wsbp-dashboard.png",
+    "features": [
+      "Analisis kebutuhan & pemetaan proses bisnis",
+      "Perancangan basis data dan arsitektur sistem",
+      "Pengembangan aplikasi web & mobile",
+      "Integrasi dengan sistem yang sudah berjalan",
+      "Pelatihan pengguna dan penyerahan dokumentasi",
+      "Garansi dan dukungan teknis pascaimplementasi"
+    ],
+    "sort_order": 1
+  },
+  {
+    "slug": "network-design-development",
+    "title": "Network Design & Development",
+    "summary": "Perancangan dan pembangunan infrastruktur jaringan LAN, WAN, hingga koneksi nirkabel.",
+    "description": "Layanan ini adalah salah satu bagian dalam pengembangan SI/TI di mana kami menyediakan semua kebutuhan pengembangan atau pembangunan infrastruktur dan jaringan komunikasi untuk Local Area Network dan Wide Area Network.\n\nLayanan ini mencakup perancangan jaringan komputer Anda mulai dari desain pengkabelan, hub/switching, server, sampai dengan pemasangannya. Saat ini kami juga telah mendukung instalasi jaringan menggunakan wireless — mulai dari penyiapan perangkat, tower, hingga koneksi nirkabel.",
+    "icon": "network",
+    "image": "/images/hero/tower.jpg",
+    "features": [
+      "Desain topologi jaringan LAN & WAN",
+      "Perancangan struktur pengkabelan (structured cabling)",
+      "Konfigurasi hub, switch, router, dan firewall",
+      "Instalasi server dan perangkat pendukung",
+      "Pembangunan koneksi wireless dan tower",
+      "Dokumentasi jaringan dan uji terima pekerjaan"
+    ],
+    "sort_order": 2
+  },
+  {
+    "slug": "service-maintenance",
+    "title": "Service & Maintenance",
+    "summary": "Perbaikan dan pemeliharaan server, komputer, notebook, dan printer oleh teknisi berpengalaman.",
+    "description": "Kami melayani perbaikan dan pemeliharaan komputer serta menawarkan solusi berkualitas atas masalah yang terjadi pada server, desktop computer, notebook, dan printer.\n\nDidukung oleh teknisi yang berpengalaman serta program customer satisfaction, layanan ini memberikan Anda rasa aman dan puas atas setiap pekerjaan yang kami tangani.",
+    "icon": "wrench",
+    "image": "/images/docs/doc-12.jpg",
+    "features": [
+      "Kontrak pemeliharaan berkala (preventive maintenance)",
+      "Penanganan gangguan server dan perangkat kerja",
+      "Perbaikan desktop, notebook, dan printer",
+      "Penggantian dan pengadaan suku cadang",
+      "Monitoring kesehatan perangkat",
+      "Laporan berkala kondisi perangkat"
+    ],
+    "sort_order": 3
+  },
+  {
+    "slug": "implementasi-sertifikasi-iso",
+    "title": "Implementasi dan Sertifikasi ISO",
+    "summary": "Pendampingan penerapan sistem manajemen ISO 9001, 27001, dan 20000-1 hingga lolos sertifikasi.",
+    "description": "Salah satu indikator keberhasilan penerapan e-government adalah adanya tata kelola data (good governance) pemerintahan yang baik, efisien, transparan, inovatif, dan partisipatif.\n\nUntuk menuju Manajemen Layanan Sistem yang baik, dibutuhkan implementasi dan sertifikasi ISO. Kami mendampingi organisasi mulai dari gap analysis, penyusunan dokumen sistem manajemen, pelatihan, audit internal, hingga pendampingan audit sertifikasi oleh lembaga sertifikasi.",
+    "icon": "certificate",
+    "image": "/images/docs/doc-05.jpg",
+    "features": [
+      "Gap analysis terhadap standar yang dituju",
+      "Penyusunan dokumen sistem manajemen & SOP",
+      "Pelatihan awareness, internal auditor, dan risk management",
+      "Pendampingan penerapan di setiap unit kerja",
+      "Pelaksanaan audit internal dan tinjauan manajemen",
+      "Pendampingan audit sertifikasi (stage 1 & stage 2)"
+    ],
+    "sort_order": 4
+  }
+]

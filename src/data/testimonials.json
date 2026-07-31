@@ -1,0 +1,42 @@
+[
+  {
+    "name": "[Contoh] Nama Narasumber",
+    "position": "Kepala Bagian Teknologi Informasi",
+    "company": "Nama Instansi / Perusahaan Klien",
+    "message": "Tuliskan di sini kalimat testimoni asli dari klien Anda — misalnya bagaimana sistem yang kami bangun mempercepat proses kerja mereka, berapa lama implementasi berjalan, dan hasil nyata yang mereka rasakan. Ganti nama, jabatan, dan instansi di atas dengan data yang sebenarnya, lalu ubah status menjadi Terbit.",
+    "rating": 5,
+    "featured": true,
+    "published": false,
+    "sort_order": 1
+  },
+  {
+    "name": "[Contoh] Nama Narasumber",
+    "position": "Manajer Sistem Manajemen Mutu",
+    "company": "Nama Instansi / Perusahaan Klien",
+    "message": "Contoh isi untuk testimoni pendampingan sertifikasi ISO: sebutkan standar yang dicapai, durasi pendampingan, dan bagaimana tim pendamping bekerja. Ganti seluruh teks ini dengan testimoni asli sebelum diterbitkan.",
+    "rating": 5,
+    "featured": true,
+    "published": false,
+    "sort_order": 2
+  },
+  {
+    "name": "[Contoh] Nama Narasumber",
+    "position": "Direktur Operasional",
+    "company": "Nama Instansi / Perusahaan Klien",
+    "message": "Contoh isi untuk testimoni layanan pemeliharaan dan dukungan teknis: sebutkan kecepatan respons tim, ketersediaan sistem, dan dampaknya pada operasional harian. Ganti seluruh teks ini dengan testimoni asli sebelum diterbitkan.",
+    "rating": 5,
+    "featured": true,
+    "published": false,
+    "sort_order": 3
+  },
+  {
+    "name": "[Contoh] Nama Narasumber",
+    "position": "Kepala Divisi Perencanaan",
+    "company": "Nama Instansi / Perusahaan Klien",
+    "message": "Contoh isi untuk testimoni pengembangan aplikasi khusus: ceritakan masalah sebelum aplikasi dibuat, solusi yang diberikan, dan perubahan yang terjadi setelahnya. Ganti seluruh teks ini dengan testimoni asli sebelum diterbitkan.",
+    "rating": 5,
+    "featured": true,
+    "published": false,
+    "sort_order": 4
+  }
+]

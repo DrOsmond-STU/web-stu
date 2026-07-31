@@ -1,0 +1,226 @@
+@import './fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    --font-display: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+
+  * {
+    @apply border-ink-200;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white text-ink-900 antialiased;
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    @apply font-extrabold tracking-tight text-ink-900;
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  ::selection {
+    @apply bg-brand-500/25 text-ink-900;
+  }
+
+  /* Scrollbar halus */
+  ::-webkit-scrollbar { width: 11px; height: 11px; }
+  ::-webkit-scrollbar-track { @apply bg-ink-50; }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-ink-300;
+    border: 3px solid white;
+  }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-brand-500; }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8;
+  }
+
+  /* ---------------------------------------------------------------- tombol */
+  .btn {
+    @apply inline-flex select-none items-center justify-center gap-2 rounded-full
+           px-6 py-3 text-sm font-bold transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply btn text-white shadow-glow;
+    background-image: linear-gradient(115deg, #1189c1 0%, #29abe2 45%, #4bcbfb 100%);
+    background-size: 180% 100%;
+  }
+  .btn-primary:hover { background-position: 100% 0; transform: translateY(-2px); }
+
+  .btn-accent {
+    @apply btn text-white;
+    background-image: linear-gradient(115deg, #db6f08 0%, #f7941d 50%, #fbb040 100%);
+    background-size: 180% 100%;
+    box-shadow: 0 18px 46px -18px rgba(247, 148, 29, 0.75);
+  }
+  .btn-accent:hover { background-position: 100% 0; transform: translateY(-2px); }
+
+  .btn-outline {
+    @apply btn border-2 border-ink-200 bg-white/100 text-ink-900 backdrop-blur hover:border-brand-500 hover:text-brand-700;
+  }
+  .btn-outline:hover { transform: translateY(-2px); }
+
+  .btn-ghost-light {
+    @apply btn border-2 border-white/35 bg-white/10 text-white backdrop-blur-md hover:bg-white hover:text-ink-900;
+  }
+
+  /* ----------------------------------------------------------------- kartu */
+  .card {
+    @apply rounded-3xl border border-ink-100 bg-white shadow-soft transition-all duration-300;
+  }
+  .card-hover:hover {
+    @apply -translate-y-1.5 border-brand-200 shadow-lift;
+  }
+
+  /* ------------------------------------------------------------------ teks */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50
+           px-4 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.16em] text-brand-700;
+  }
+  .eyebrow-light {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/12
+           px-4 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.16em] text-white backdrop-blur-md;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(100deg, #1189c1 0%, #29abe2 40%, #fbb040 100%);
+  }
+  .text-gradient-light {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(100deg, #ffffff 0%, #b9eaff 45%, #fbb040 100%);
+  }
+
+  .section {
+    @apply py-20 sm:py-28;
+  }
+
+  /* -------------------------------------------------------------- kanvas bg */
+  .bg-mesh {
+    background-color: #f7fbfd;
+    background-image:
+      radial-gradient(at 8% 0%, rgba(41, 171, 226, 0.16) 0px, transparent 55%),
+      radial-gradient(at 92% 12%, rgba(251, 176, 64, 0.14) 0px, transparent 50%),
+      radial-gradient(at 60% 100%, rgba(17, 137, 193, 0.12) 0px, transparent 55%);
+  }
+
+  .bg-deep {
+    background-color: #0b2740;
+    background-image:
+      radial-gradient(at 10% 8%, rgba(41, 171, 226, 0.34) 0px, transparent 52%),
+      radial-gradient(at 88% 92%, rgba(247, 148, 29, 0.24) 0px, transparent 48%),
+      radial-gradient(at 78% 6%, rgba(17, 137, 193, 0.3) 0px, transparent 50%);
+  }
+
+  .divider-gradient {
+    height: 4px;
+    background-image: linear-gradient(90deg, #1189c1, #29abe2 30%, #4bcbfb 55%, #fbb040 80%, #f7941d);
+  }
+
+  /* ------------------------------------------------------------ isi artikel */
+  .prose-stu {
+    @apply text-[17px] leading-[1.85] text-ink-800;
+  }
+  .prose-stu > * + * { @apply mt-6; }
+  .prose-stu h2 {
+    @apply mt-14 scroll-mt-28 text-2xl font-extrabold text-ink-900 sm:text-[28px];
+  }
+  .prose-stu h3 {
+    @apply mt-10 text-xl font-bold text-ink-900;
+  }
+  .prose-stu p { @apply text-ink-800; }
+  .prose-stu strong { @apply font-bold text-ink-900; }
+  .prose-stu em { @apply italic; }
+  .prose-stu a {
+    @apply font-semibold text-brand-700 underline decoration-brand-300 decoration-2 underline-offset-4 hover:text-brand-800;
+  }
+  .prose-stu ul { @apply list-disc space-y-2.5 pl-6 marker:text-brand-500; }
+  .prose-stu ol { @apply list-decimal space-y-2.5 pl-6 marker:font-bold marker:text-brand-600; }
+  .prose-stu blockquote {
+    @apply rounded-r-2xl border-l-4 border-brand-500 bg-brand-50/70 py-4 pl-6 pr-5 text-ink-800 not-italic;
+  }
+  .prose-stu img { @apply w-full rounded-2xl shadow-soft; }
+  .prose-stu code {
+    @apply rounded-md bg-ink-100 px-1.5 py-0.5 font-mono text-[0.88em] text-ink-900;
+  }
+  .prose-stu pre {
+    @apply overflow-x-auto rounded-2xl bg-ink-950 p-5 text-sm text-ink-100;
+  }
+  .prose-stu pre code { @apply bg-transparent p-0 text-inherit; }
+  .prose-stu hr { @apply border-ink-200; }
+  .prose-stu table { @apply w-full border-collapse text-left text-sm; }
+  .prose-stu th { @apply border-b-2 border-ink-200 py-3 font-bold; }
+  .prose-stu td { @apply border-b border-ink-100 py-3; }
+
+  /* ------------------------------------------------------------ form dasar */
+  .field-label {
+    @apply mb-2 block text-[13px] font-bold text-ink-800;
+  }
+  .field {
+    @apply w-full rounded-xl border-2 border-ink-200 bg-white px-4 py-3 text-[15px] text-ink-900
+           transition-colors placeholder:text-ink-400 focus:border-brand-500 focus:outline-none focus:ring-0;
+  }
+  .field-sm {
+    @apply w-full rounded-lg border-2 border-ink-200 bg-white px-3 py-2 text-sm text-ink-900
+           transition-colors placeholder:text-ink-400 focus:border-brand-500 focus:outline-none;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-bold;
+  }
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .mask-fade-r {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
