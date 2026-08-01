@@ -4,7 +4,6 @@ import { IconArrowRight, IconBriefcase, IconMapPin } from '@/components/icons';
 import { ExperienceTable } from '@/components/experience-table';
 import { PageHero } from '@/components/page-hero';
 import { getExperiences } from '@/lib/content';
-import { formatRupiah } from '@/lib/utils';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -18,8 +17,8 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function ExperiencePage() {
   const experiences = await getExperiences();
 
-  const totalValue = experiences.reduce((sum, item) => sum + Number(item.contract_value || 0), 0);
   const clients = new Set(experiences.map((item) => item.client)).size;
+  const fields = new Set(experiences.map((item) => item.field)).size;
   const years = experiences.map((item) => item.year).filter(Boolean) as number[];
   const range = years.length ? `${Math.min(...years)} – ${Math.max(...years)}` : '—';
 
@@ -27,7 +26,7 @@ export default async function ExperiencePage() {
     { label: 'Total Pekerjaan', value: String(experiences.length), hint: 'Kontrak yang telah diselesaikan' },
     { label: 'Institusi Klien', value: String(clients), hint: 'Kementerian, lembaga & korporasi' },
     { label: 'Rentang Tahun', value: range, hint: 'Sejak perusahaan berdiri' },
-    { label: 'Total Nilai Kontrak', value: formatRupiah(totalValue), hint: 'Akumulasi seluruh pekerjaan' },
+    { label: 'Bidang Layanan', value: String(fields), hint: 'Teknologi informasi & konsultasi manajemen' },
   ];
 
   return (

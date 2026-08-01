@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { GithubSyncButton } from '@/components/admin/github-sync';
 import { IconEdit, IconPlus, IconSearch } from '@/components/icons';
 import { toggleResourceAction } from '@/lib/admin/actions';
 import { getResource } from '@/lib/admin/resources';
@@ -49,13 +48,10 @@ export default async function ResourceListPage({ params, searchParams }: Props) 
             {resource.description}
           </p>
         </div>
-        <div className="flex shrink-0 flex-wrap items-start gap-3">
-          {resource.key === 'proyek' ? <GithubSyncButton /> : null}
-          <Link href={`/admin/${resource.key}/baru`} className="btn-primary !py-3">
-            <IconPlus className="h-4 w-4" />
-            Tambah {resource.labelSingular}
-          </Link>
-        </div>
+        <Link href={`/admin/${resource.key}/baru`} className="btn-primary shrink-0 !py-3">
+          <IconPlus className="h-4 w-4" />
+          Tambah {resource.labelSingular}
+        </Link>
       </header>
 
       {status ? (

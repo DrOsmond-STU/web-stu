@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react';
 import { IconSearch } from '@/components/icons';
 import type { Experience } from '@/lib/types';
-import { cn, formatRupiah } from '@/lib/utils';
+import { cn } from '@/lib/utils';
 
 export function ExperienceTable({ items }: { items: Experience[] }) {
   const years = useMemo(
@@ -22,7 +22,7 @@ export function ExperienceTable({ items }: { items: Experience[] }) {
     return items.filter((item) => {
       if (year !== 'semua' && item.year !== year) return false;
       if (!q) return true;
-      return [item.title, item.client, item.field, item.location, item.contract_no]
+      return [item.title, item.client, item.field, item.location]
         .join(' ')
         .toLowerCase()
         .includes(q);
@@ -67,7 +67,7 @@ export function ExperienceTable({ items }: { items: Experience[] }) {
           <input
             value={keyword}
             onChange={(event) => setKeyword(event.target.value)}
-            placeholder="Cari pekerjaan, klien, atau nomor kontrak…"
+            placeholder="Cari pekerjaan, klien, atau lokasi…"
             aria-label="Cari pengalaman pekerjaan"
             className="field !rounded-full !py-3 pl-11"
           />
@@ -84,8 +84,8 @@ export function ExperienceTable({ items }: { items: Experience[] }) {
                 <th className="px-5 py-4 font-bold">Nama Pekerjaan</th>
                 <th className="px-5 py-4 font-bold">Bidang</th>
                 <th className="px-5 py-4 font-bold">Pemberi Tugas</th>
-                <th className="px-5 py-4 font-bold">Kontrak</th>
-                <th className="px-5 py-4 text-right font-bold">Nilai</th>
+                <th className="px-5 py-4 font-bold">Lokasi</th>
+                <th className="px-5 py-4 text-right font-bold">Tahun</th>
               </tr>
             </thead>
             <tbody>
@@ -97,25 +97,15 @@ export function ExperienceTable({ items }: { items: Experience[] }) {
                   <td className="px-5 py-4 font-bold tabular-nums text-ink-400">{index + 1}</td>
                   <td className="px-5 py-4">
                     <p className="font-bold leading-snug text-ink-900">{item.title}</p>
-                    <p className="mt-1 text-[12px] text-ink-500">{item.location}</p>
                   </td>
                   <td className="px-5 py-4 text-ink-600">{item.field}</td>
                   <td className="px-5 py-4">
                     <p className="font-semibold leading-snug text-ink-800">{item.client}</p>
                     <p className="mt-1 text-[12px] text-ink-500">{item.client_address}</p>
                   </td>
-                  <td className="px-5 py-4">
-                    {item.contract_no ? (
-                      <p className="font-mono text-[12px] leading-snug text-ink-600">
-                        {item.contract_no}
-                      </p>
-                    ) : null}
-                    <p className="mt-1 text-[12px] font-semibold text-brand-600">
-                      {item.contract_date}
-                    </p>
-                  </td>
+                  <td className="px-5 py-4 text-ink-600">{item.location}</td>
                   <td className="whitespace-nowrap px-5 py-4 text-right font-bold tabular-nums text-ink-900">
-                    {formatRupiah(item.contract_value)}
+                    {item.year ?? '—'}
                   </td>
                 </tr>
               ))}
@@ -152,23 +142,7 @@ export function ExperienceTable({ items }: { items: Experience[] }) {
                 <dt className="w-24 shrink-0 font-semibold text-ink-400">Lokasi</dt>
                 <dd className="flex-1 text-ink-700">{item.location}</dd>
               </div>
-              {item.contract_no ? (
-                <div className="flex gap-2">
-                  <dt className="w-24 shrink-0 font-semibold text-ink-400">No. SPK</dt>
-                  <dd className="flex-1 break-all font-mono text-[12px] text-ink-600">
-                    {item.contract_no}
-                  </dd>
-                </div>
-              ) : null}
-              <div className="flex gap-2">
-                <dt className="w-24 shrink-0 font-semibold text-ink-400">Tanggal</dt>
-                <dd className="flex-1 text-ink-700">{item.contract_date}</dd>
-              </div>
             </dl>
-
-            <p className="mt-4 border-t border-ink-100 pt-4 text-right text-[16px] font-extrabold text-brand-700">
-              {formatRupiah(item.contract_value)}
-            </p>
           </article>
         ))}
       </div>

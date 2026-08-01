@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { IconArrowRight, IconGithub } from '@/components/icons';
+import { IconArrowRight } from '@/components/icons';
 import { PageHero } from '@/components/page-hero';
 import { ProjectExplorer } from '@/components/project-explorer';
-import { getProjects, getSettings } from '@/lib/content';
+import { getProjects } from '@/lib/content';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -15,9 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function ProjectsPage() {
-  const [projects, settings] = await Promise.all([getProjects(), getSettings()]);
-
-  const githubCount = projects.filter((p) => p.source === 'github').length;
+  const projects = await getProjects();
 
   return (
     <>
@@ -33,31 +31,6 @@ export default async function ProjectsPage() {
         <div className="container-page">
           <ProjectExplorer projects={projects} />
 
-          {githubCount > 0 && settings.social_github ? (
-            <div className="reveal mt-16 flex flex-col items-center justify-between gap-6 rounded-[32px] border border-ink-100 bg-mesh p-9 sm:flex-row sm:p-11">
-              <div className="flex items-center gap-5">
-                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-ink-900 text-white">
-                  <IconGithub className="h-7 w-7" />
-                </span>
-                <div>
-                  <h2 className="text-xl">Repositori pengembangan kami</h2>
-                  <p className="mt-1.5 max-w-lg text-[14.5px] leading-relaxed text-ink-600">
-                    {githubCount} produk aplikasi kami dikembangkan dan dikelola di GitHub. Sebagian
-                    besar bersifat privat karena memuat kode milik klien.
-                  </p>
-                </div>
-              </div>
-              <a
-                href={settings.social_github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-outline shrink-0"
-              >
-                <IconGithub className="h-4 w-4" />
-                Kunjungi GitHub
-              </a>
-            </div>
-          ) : null}
         </div>
       </section>
 

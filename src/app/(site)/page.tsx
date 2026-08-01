@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { ClientMarquee } from '@/components/client-marquee';
 import { HeroSlider, type HeroSlide } from '@/components/hero-slider';
 import {
   DynamicIcon,
@@ -15,7 +16,7 @@ import { SectionHeading } from '@/components/section-heading';
 import { StatCounter, type Stat } from '@/components/stat-counter';
 import { TestimonialSlider } from '@/components/testimonial-slider';
 import {
-  getExperiences,
+  getClients,
   getGallery,
   getPosts,
   getProjects,
@@ -29,14 +30,14 @@ import { formatDate, whatsappLink } from '@/lib/utils';
 type ValueItem = { title: string; icon: string; text: string };
 
 export default async function HomePage() {
-  const [settings, services, projects, testimonials, posts, gallery, experiences] = await Promise.all([
+  const [settings, services, projects, testimonials, posts, gallery, clients] = await Promise.all([
     getSettings(),
     getServices(),
     getProjects({ limit: 6 }),
     getTestimonials(6),
     getPosts({ limit: 3 }),
     getGallery(),
-    getExperiences(),
+    getClients(),
   ]);
 
   const slides = parseJsonSetting<HeroSlide[]>(settings.hero_slides, []);
@@ -54,9 +55,6 @@ export default async function HomePage() {
             subtitle: settings.hero_subtitle,
           },
         ];
-
-  // Klien unik dari daftar pengalaman, untuk baris logo berjalan.
-  const clientNames = Array.from(new Set(experiences.map((e) => e.client).filter(Boolean))).slice(0, 12);
 
   return (
     <>
@@ -81,25 +79,7 @@ export default async function HomePage() {
       </section>
 
       {/* ----------------------------------------------------------- klien kami */}
-      {clientNames.length > 0 ? (
-        <section className="overflow-hidden border-b border-ink-100 bg-ink-50/60 py-8">
-          <p className="container-page mb-6 text-center text-[11.5px] font-extrabold uppercase tracking-[0.2em] text-ink-400">
-            Dipercaya oleh instansi pemerintah &amp; korporasi
-          </p>
-          <div className="mask-fade-r relative flex overflow-hidden">
-            <div className="animate-marquee flex shrink-0 items-center gap-12 pr-12">
-              {[...clientNames, ...clientNames].map((name, i) => (
-                <span
-                  key={`${name}-${i}`}
-                  className="whitespace-nowrap text-[15px] font-bold text-ink-400 transition-colors hover:text-brand-600"
-                >
-                  {name}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
-      ) : null}
+      <ClientMarquee clients={clients} title={settings.clients_title} />
 
       {/* -------------------------------------------------------- tentang kami */}
       <section className="section bg-white">

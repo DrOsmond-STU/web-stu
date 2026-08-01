@@ -1,15 +1,81 @@
 [
-  { "key": "site_name", "value": "Semesta Teknologi Utama", "group": "identitas", "label": "Nama Website", "type": "text" },
-  { "key": "company_name", "value": "CV. SEMESTA TEKNOLOGI UTAMA", "group": "identitas", "label": "Nama Lengkap Perusahaan", "type": "text" },
-  { "key": "company_short", "value": "STU", "group": "identitas", "label": "Singkatan Perusahaan", "type": "text" },
-  { "key": "tagline", "value": "Digital Business & Technology Solutions", "group": "identitas", "label": "Tagline", "type": "text" },
-  { "key": "logo", "value": "/images/brand/logo-horizontal.png", "group": "identitas", "label": "Logo Utama (horizontal)", "type": "image" },
-  { "key": "logo_mark", "value": "/images/brand/logo-mark.png", "group": "identitas", "label": "Logo Ikon (persegi)", "type": "image" },
-  { "key": "founded_year", "value": "2020", "group": "identitas", "label": "Tahun Berdiri", "type": "text" },
-  { "key": "legal_akta", "value": "Akta Pendirian Nomor 151 Tahun 2020 — Notaris Nurlisa Uke Desy, S.H., M.Kn.", "group": "identitas", "label": "Akta Pendirian", "type": "text" },
-  { "key": "legal_nib", "value": "0220207232509", "group": "identitas", "label": "Nomor NIB", "type": "text" },
-  { "key": "legal_siup", "value": "0220207232509 Tahun 2020", "group": "identitas", "label": "Nomor Surat Izin Usaha", "type": "text" },
-  { "key": "legal_npwp", "value": "94.389.552.4-017.000", "group": "identitas", "label": "Nomor NPWP", "type": "text" },
+  {
+    "key": "site_name",
+    "value": "Semesta Teknologi Utama",
+    "group": "identitas",
+    "label": "Nama Website",
+    "type": "text"
+  },
+  {
+    "key": "company_name",
+    "value": "CV. SEMESTA TEKNOLOGI UTAMA",
+    "group": "identitas",
+    "label": "Nama Lengkap Perusahaan",
+    "type": "text"
+  },
+  {
+    "key": "company_short",
+    "value": "STU",
+    "group": "identitas",
+    "label": "Singkatan Perusahaan",
+    "type": "text"
+  },
+  {
+    "key": "tagline",
+    "value": "Digital Business & Technology Solutions",
+    "group": "identitas",
+    "label": "Tagline",
+    "type": "text"
+  },
+  {
+    "key": "logo",
+    "value": "/images/brand/logo-horizontal.png",
+    "group": "identitas",
+    "label": "Logo Utama (horizontal)",
+    "type": "image"
+  },
+  {
+    "key": "logo_mark",
+    "value": "/images/brand/logo-mark.png",
+    "group": "identitas",
+    "label": "Logo Ikon (persegi)",
+    "type": "image"
+  },
+  {
+    "key": "founded_year",
+    "value": "2020",
+    "group": "identitas",
+    "label": "Tahun Berdiri",
+    "type": "text"
+  },
+  {
+    "key": "legal_akta",
+    "value": "Akta Pendirian Nomor 151 Tahun 2020 — Notaris Nurlisa Uke Desy, S.H., M.Kn.",
+    "group": "identitas",
+    "label": "Akta Pendirian",
+    "type": "text"
+  },
+  {
+    "key": "legal_nib",
+    "value": "0220207232509",
+    "group": "identitas",
+    "label": "Nomor NIB",
+    "type": "text"
+  },
+  {
+    "key": "legal_siup",
+    "value": "0220207232509 Tahun 2020",
+    "group": "identitas",
+    "label": "Nomor Surat Izin Usaha",
+    "type": "text"
+  },
+  {
+    "key": "legal_npwp",
+    "value": "94.389.552.4-017.000",
+    "group": "identitas",
+    "label": "Nomor NPWP",
+    "type": "text"
+  },
   {
     "key": "kbli_list",
     "value": "46491 — Perdagangan Besar Peralatan dan Perlengkapan Rumah Tangga\n46511 — Perdagangan Besar Komputer dan Perlengkapan Komputer\n46512 — Perdagangan Besar Piranti Lunak\n62019 — Aktivitas Pemrograman Komputer Lainnya\n62029 — Aktivitas Konsultasi Komputer dan Manajemen Fasilitas Komputer Lainnya\n63122 — Portal Web dan/atau Platform Digital dengan Tujuan Komersial\n70209 — Aktivitas Konsultasi Manajemen Lainnya",
@@ -18,7 +84,6 @@
     "type": "textarea",
     "hint": "Satu bidang usaha per baris."
   },
-
   {
     "key": "whatsapp_number",
     "value": "628123456789",
@@ -49,10 +114,34 @@
     "type": "textarea",
     "hint": "Satu pilihan per baris. Tampil sebagai tombol di widget chat."
   },
-  { "key": "whatsapp_agent_name", "value": "Tim Semesta Teknologi Utama", "group": "kontak", "label": "Nama Agen di Widget Chat", "type": "text" },
-  { "key": "whatsapp_agent_role", "value": "Biasanya membalas dalam beberapa menit", "group": "kontak", "label": "Keterangan Agen", "type": "text" },
-  { "key": "contact_email", "value": "info@semestateknologiutama.com", "group": "kontak", "label": "Email Utama", "type": "text" },
-  { "key": "contact_phone", "value": "+62 812-3456-789", "group": "kontak", "label": "Nomor Telepon", "type": "text" },
+  {
+    "key": "whatsapp_agent_name",
+    "value": "Tim Semesta Teknologi Utama",
+    "group": "kontak",
+    "label": "Nama Agen di Widget Chat",
+    "type": "text"
+  },
+  {
+    "key": "whatsapp_agent_role",
+    "value": "Biasanya membalas dalam beberapa menit",
+    "group": "kontak",
+    "label": "Keterangan Agen",
+    "type": "text"
+  },
+  {
+    "key": "contact_email",
+    "value": "info@semestateknologiutama.com",
+    "group": "kontak",
+    "label": "Email Utama",
+    "type": "text"
+  },
+  {
+    "key": "contact_phone",
+    "value": "+62 812-3456-789",
+    "group": "kontak",
+    "label": "Nomor Telepon",
+    "type": "text"
+  },
   {
     "key": "address",
     "value": "Conclave Simatupang, Kawasan Komersial Cilandak No. 410, Jalan Cilandak KKO, Cilandak Timur, Pasar Minggu, Jakarta Selatan, DKI Jakarta 12560",
@@ -60,7 +149,13 @@
     "label": "Alamat Kantor",
     "type": "textarea"
   },
-  { "key": "office_hours", "value": "Senin – Jumat, 08.30 – 17.30 WIB", "group": "kontak", "label": "Jam Operasional", "type": "text" },
+  {
+    "key": "office_hours",
+    "value": "Senin – Jumat, 08.30 – 17.30 WIB",
+    "group": "kontak",
+    "label": "Jam Operasional",
+    "type": "text"
+  },
   {
     "key": "map_embed",
     "value": "https://www.google.com/maps?q=Conclave%20Simatupang%20Cilandak%20Jakarta&output=embed",
@@ -69,9 +164,20 @@
     "type": "text",
     "hint": "Ambil dari Google Maps → Bagikan → Sematkan peta, lalu salin URL di dalam atribut src."
   },
-
-  { "key": "hero_eyebrow", "value": "Digital Business Company", "group": "beranda", "label": "Label Kecil di Atas Judul", "type": "text" },
-  { "key": "hero_title", "value": "Solusi Teknologi Informasi yang Tumbuh Bersama Bisnis Anda", "group": "beranda", "label": "Judul Utama Hero", "type": "text" },
+  {
+    "key": "hero_eyebrow",
+    "value": "Digital Business Company",
+    "group": "beranda",
+    "label": "Label Kecil di Atas Judul",
+    "type": "text"
+  },
+  {
+    "key": "hero_title",
+    "value": "Solusi Teknologi Informasi yang Tumbuh Bersama Bisnis Anda",
+    "group": "beranda",
+    "label": "Judul Utama Hero",
+    "type": "text"
+  },
   {
     "key": "hero_subtitle",
     "value": "Kami merancang, membangun, dan memelihara sistem informasi untuk instansi pemerintah dan perusahaan di Indonesia — dari pengembangan aplikasi khusus hingga pendampingan sertifikasi ISO.",
@@ -79,10 +185,34 @@
     "label": "Deskripsi Hero",
     "type": "textarea"
   },
-  { "key": "hero_cta_primary_text", "value": "Konsultasi Gratis", "group": "beranda", "label": "Teks Tombol Utama", "type": "text" },
-  { "key": "hero_cta_primary_link", "value": "/kontak", "group": "beranda", "label": "Tautan Tombol Utama", "type": "text" },
-  { "key": "hero_cta_secondary_text", "value": "Lihat Portofolio", "group": "beranda", "label": "Teks Tombol Kedua", "type": "text" },
-  { "key": "hero_cta_secondary_link", "value": "/proyek", "group": "beranda", "label": "Tautan Tombol Kedua", "type": "text" },
+  {
+    "key": "hero_cta_primary_text",
+    "value": "Konsultasi Gratis",
+    "group": "beranda",
+    "label": "Teks Tombol Utama",
+    "type": "text"
+  },
+  {
+    "key": "hero_cta_primary_link",
+    "value": "/kontak",
+    "group": "beranda",
+    "label": "Tautan Tombol Utama",
+    "type": "text"
+  },
+  {
+    "key": "hero_cta_secondary_text",
+    "value": "Lihat Portofolio",
+    "group": "beranda",
+    "label": "Teks Tombol Kedua",
+    "type": "text"
+  },
+  {
+    "key": "hero_cta_secondary_link",
+    "value": "/proyek",
+    "group": "beranda",
+    "label": "Tautan Tombol Kedua",
+    "type": "text"
+  },
   {
     "key": "hero_slides",
     "value": "[\n  {\n    \"image\": \"/images/hero/city-2.jpg\",\n    \"eyebrow\": \"Digital Business Company\",\n    \"title\": \"Solusi Teknologi Informasi yang Tumbuh Bersama Bisnis Anda\",\n    \"subtitle\": \"Kami merancang, membangun, dan memelihara sistem informasi untuk instansi pemerintah dan perusahaan di Indonesia.\"\n  },\n  {\n    \"image\": \"/images/hero/analytics.jpg\",\n    \"eyebrow\": \"Custom Application Development\",\n    \"title\": \"Aplikasi Dibangun Sesuai Proses Bisnis Anda\",\n    \"subtitle\": \"Dari ERP, dokumen manajemen, hingga portal layanan publik — dirancang khusus, bukan sekadar produk jadi.\"\n  },\n  {\n    \"image\": \"/images/docs/doc-05.jpg\",\n    \"eyebrow\": \"Implementasi & Sertifikasi ISO\",\n    \"title\": \"Pendampingan ISO 9001, 27001 & 20000-1\",\n    \"subtitle\": \"Telah mendampingi Kementerian Dalam Negeri, Kementerian Agama, dan pemerintah daerah menuju sertifikasi.\"\n  },\n  {\n    \"image\": \"/images/hero/handshake.jpg\",\n    \"eyebrow\": \"Service & Maintenance\",\n    \"title\": \"Sistem yang Dirawat, Bukan Sekadar Dibangun\",\n    \"subtitle\": \"Filosofi kami: “Sistem yang memelihara”. Setiap sistem kami rawat seperti makhluk hidup hingga mandiri.\"\n  }\n]",
@@ -98,7 +228,21 @@
     "label": "Statistik Beranda (JSON)",
     "type": "json"
   },
-  { "key": "cta_title", "value": "Siap mengubah proses bisnis Anda menjadi digital?", "group": "beranda", "label": "Judul Ajakan Bertindak", "type": "text" },
+  {
+    "key": "clients_title",
+    "value": "Dipercaya oleh instansi pemerintah & korporasi",
+    "group": "beranda",
+    "label": "Judul Baris Logo Klien",
+    "type": "text",
+    "hint": "Teks kecil di atas baris logo klien pada beranda. Logonya dikelola di menu Klien & Mitra."
+  },
+  {
+    "key": "cta_title",
+    "value": "Siap mengubah proses bisnis Anda menjadi digital?",
+    "group": "beranda",
+    "label": "Judul Ajakan Bertindak",
+    "type": "text"
+  },
   {
     "key": "cta_subtitle",
     "value": "Ceritakan kebutuhan Anda kepada tim kami. Konsultasi awal gratis, tanpa ikatan apa pun.",
@@ -106,7 +250,6 @@
     "label": "Deskripsi Ajakan Bertindak",
     "type": "textarea"
   },
-
   {
     "key": "about_intro",
     "value": "Perkembangan Teknologi Informasi saat ini sangat cepat dan luas. Semua bidang usaha membutuhkan TI sebagai sumber daya pendukung yang mampu meningkatkan efektivitas dan efisiensi kerja perusahaan.",
@@ -121,7 +264,13 @@
     "label": "Isi Tentang Kami",
     "type": "markdown"
   },
-  { "key": "about_image", "value": "/images/hero/meeting.jpg", "group": "tentang", "label": "Gambar Tentang Kami", "type": "image" },
+  {
+    "key": "about_image",
+    "value": "/images/hero/meeting.jpg",
+    "group": "tentang",
+    "label": "Gambar Tentang Kami",
+    "type": "image"
+  },
   {
     "key": "vision",
     "value": "Menjadi perusahaan Teknologi Informasi terbaik di Indonesia yang tidak hanya menawarkan jasa & produk jadi, namun memberikan solusi di bidang layanan Teknologi Informasi bagi kebutuhan usaha klien.",
@@ -143,7 +292,6 @@
     "label": "Nilai Perusahaan (JSON)",
     "type": "json"
   },
-
   {
     "key": "seo_title",
     "value": "Semesta Teknologi Utama — Jasa Pengembangan Aplikasi & Konsultan ISO Jakarta",
@@ -168,14 +316,68 @@
     "type": "textarea",
     "hint": "Pisahkan dengan koma."
   },
-  { "key": "seo_og_image", "value": "/images/hero/city-2.jpg", "group": "seo", "label": "Gambar Bagikan (Open Graph)", "type": "image" },
-  { "key": "seo_google_verification", "value": "", "group": "seo", "label": "Kode Verifikasi Google Search Console", "type": "text", "hint": "Isi hanya kode di dalam atribut content, bukan seluruh tag meta." },
-  { "key": "seo_bing_verification", "value": "", "group": "seo", "label": "Kode Verifikasi Bing Webmaster", "type": "text" },
-  { "key": "seo_ga_id", "value": "", "group": "seo", "label": "ID Google Analytics (G-XXXXXXX)", "type": "text" },
-
-  { "key": "social_linkedin", "value": "", "group": "sosial", "label": "LinkedIn", "type": "text" },
-  { "key": "social_instagram", "value": "", "group": "sosial", "label": "Instagram", "type": "text" },
-  { "key": "social_facebook", "value": "", "group": "sosial", "label": "Facebook", "type": "text" },
-  { "key": "social_youtube", "value": "", "group": "sosial", "label": "YouTube", "type": "text" },
-  { "key": "social_github", "value": "https://github.com/DrOsmond-STU", "group": "sosial", "label": "GitHub", "type": "text" }
+  {
+    "key": "seo_og_image",
+    "value": "/images/hero/city-2.jpg",
+    "group": "seo",
+    "label": "Gambar Bagikan (Open Graph)",
+    "type": "image"
+  },
+  {
+    "key": "seo_google_verification",
+    "value": "",
+    "group": "seo",
+    "label": "Kode Verifikasi Google Search Console",
+    "type": "text",
+    "hint": "Isi hanya kode di dalam atribut content, bukan seluruh tag meta."
+  },
+  {
+    "key": "seo_bing_verification",
+    "value": "",
+    "group": "seo",
+    "label": "Kode Verifikasi Bing Webmaster",
+    "type": "text"
+  },
+  {
+    "key": "seo_ga_id",
+    "value": "",
+    "group": "seo",
+    "label": "ID Google Analytics (G-XXXXXXX)",
+    "type": "text"
+  },
+  {
+    "key": "social_linkedin",
+    "value": "",
+    "group": "sosial",
+    "label": "LinkedIn",
+    "type": "text"
+  },
+  {
+    "key": "social_instagram",
+    "value": "",
+    "group": "sosial",
+    "label": "Instagram",
+    "type": "text"
+  },
+  {
+    "key": "social_facebook",
+    "value": "",
+    "group": "sosial",
+    "label": "Facebook",
+    "type": "text"
+  },
+  {
+    "key": "social_youtube",
+    "value": "",
+    "group": "sosial",
+    "label": "YouTube",
+    "type": "text"
+  },
+  {
+    "key": "social_github",
+    "value": "https://github.com/DrOsmond-STU",
+    "group": "sosial",
+    "label": "GitHub",
+    "type": "text"
+  }
 ]

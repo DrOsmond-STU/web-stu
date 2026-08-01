@@ -28,6 +28,7 @@ const projects = read('projects.json');
 const experiences = read('experiences.json');
 const team = read('team.json');
 const gallery = read('gallery.json');
+const clients = read('clients.json');
 const testimonials = read('testimonials.json');
 const posts = read('posts.json');
 
@@ -136,6 +137,17 @@ try {
     );
   }
   console.log(`✅ ${gallery.length} item galeri`);
+
+  // ------------------------------------------------------------------ klien
+  for (const c of clients) {
+    await q(
+      `INSERT INTO clients (name, logo, website, sort_order)
+       SELECT $1,$2,$3,$4
+       WHERE NOT EXISTS (SELECT 1 FROM clients WHERE name = $1)`,
+      [c.name, c.logo ?? null, c.website ?? null, c.sort_order ?? 0],
+    );
+  }
+  console.log(`✅ ${clients.length} klien & mitra (unggah logonya lewat CMS)`);
 
   // --------------------------------------------------------------- testimoni
   // Sengaja disimpan sebagai DRAFT (published = false). Isi dengan testimoni

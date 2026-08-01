@@ -1,5 +1,6 @@
 import { safeQuery } from '@/lib/db';
 import { DEFAULT_SETTINGS_MAP } from '@/lib/defaults';
+import clientsData from '@/data/clients.json';
 import galleryData from '@/data/gallery.json';
 import projectsData from '@/data/projects.json';
 import postsData from '@/data/posts.json';
@@ -7,6 +8,7 @@ import servicesData from '@/data/services.json';
 import teamData from '@/data/team.json';
 import experiencesData from '@/data/experiences.json';
 import type {
+  Client,
   Experience,
   GalleryItem,
   Post,
@@ -78,6 +80,15 @@ const fallbackGallery: GalleryItem[] = (galleryData as never[]).map((g: any, i) 
   image: g.image,
   category: g.category,
   sort_order: g.sort_order ?? i,
+  published: true,
+}));
+
+const fallbackClients: Client[] = (clientsData as never[]).map((c: any, i) => ({
+  id: i + 1,
+  name: c.name,
+  logo: c.logo ?? null,
+  website: c.website ?? null,
+  sort_order: c.sort_order ?? i,
   published: true,
 }));
 
@@ -263,6 +274,13 @@ export async function getGallery(): Promise<GalleryItem[]> {
     'SELECT * FROM gallery_items WHERE published = TRUE ORDER BY sort_order, id',
   );
   return rows.length ? rows : fallbackGallery;
+}
+
+export async function getClients(): Promise<Client[]> {
+  const rows = await safeQuery<Client>(
+    'SELECT * FROM clients WHERE published = TRUE ORDER BY sort_order, id',
+  );
+  return rows.length ? rows : fallbackClients;
 }
 
 export async function getExperiences(): Promise<Experience[]> {

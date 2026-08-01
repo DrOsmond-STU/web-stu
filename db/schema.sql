@@ -149,9 +149,17 @@ CREATE TABLE IF NOT EXISTS clients (
   id         SERIAL PRIMARY KEY,
   name       TEXT NOT NULL,
   logo       TEXT,
+  website    TEXT,
   sort_order INTEGER NOT NULL DEFAULT 0,
-  published  BOOLEAN NOT NULL DEFAULT TRUE
+  published  BOOLEAN NOT NULL DEFAULT TRUE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+
+-- Kolom tambahan untuk basis data yang dibuat sebelum kolom ini ada.
+ALTER TABLE clients ADD COLUMN IF NOT EXISTS website    TEXT;
+ALTER TABLE clients ADD COLUMN IF NOT EXISTS created_at TIMESTAMPTZ NOT NULL DEFAULT NOW();
+ALTER TABLE clients ADD COLUMN IF NOT EXISTS updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW();
 
 CREATE TABLE IF NOT EXISTS messages (
   id         SERIAL PRIMARY KEY,

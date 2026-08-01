@@ -94,6 +94,15 @@ export type Experience = {
   published: boolean;
 };
 
+export type Client = {
+  id: number;
+  name: string;
+  logo: string | null;
+  website: string | null;
+  sort_order: number;
+  published: boolean;
+};
+
 export type GalleryItem = {
   id: number;
   title: string;

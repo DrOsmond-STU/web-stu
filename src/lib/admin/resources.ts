@@ -276,6 +276,34 @@ export const RESOURCES: Resource[] = [
     ],
   },
   {
+    key: 'klien',
+    table: 'clients',
+    label: 'Klien & Mitra',
+    labelSingular: 'Klien',
+    description:
+      'Logo instansi dan perusahaan yang pernah memakai jasa kami. Tampil pada baris berjalan "Dipercaya oleh…" di beranda.',
+    icon: 'building',
+    orderBy: 'sort_order, id',
+    searchable: ['name'],
+    titleField: 'name',
+    toggleField: 'published',
+    notice:
+      'Unggah logo dengan latar transparan (PNG) atau latar putih agar tampil rapi. Tinggi logo disamakan otomatis. Bila logo dikosongkan, yang tampil hanya nama instansi.',
+    columns: [
+      { name: 'logo', label: '', type: 'image', width: 'w-28' },
+      { name: 'name', label: 'Nama Instansi / Perusahaan' },
+      { name: 'sort_order', label: 'Urutan', type: 'number' },
+      { name: 'published', label: 'Status', type: 'boolean' },
+    ],
+    fields: [
+      { name: 'name', label: 'Nama Instansi / Perusahaan', type: 'text', required: true, span: 12 },
+      { name: 'website', label: 'Tautan Situs (opsional)', type: 'text', span: 12, hint: 'Bila diisi, logo dapat diklik menuju situs tersebut.' },
+      { name: 'logo', label: 'Logo', type: 'image', span: 12, aside: true },
+      { name: 'sort_order', label: 'Urutan Tampil', type: 'number', span: 12, aside: true, hint: 'Angka kecil tampil lebih dulu.' },
+      { name: 'published', label: 'Tampilkan', type: 'boolean', span: 12, aside: true },
+    ],
+  },
+  {
     key: 'galeri',
     table: 'gallery_items',
     label: 'Galeri',
