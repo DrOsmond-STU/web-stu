@@ -33,7 +33,7 @@ export default async function HomePage() {
   const [settings, services, projects, testimonials, posts, gallery, clients] = await Promise.all([
     getSettings(),
     getServices(),
-    getProjects({ limit: 6 }),
+    getProjects(),
     getTestimonials(6),
     getPosts({ limit: 3 }),
     getGallery(),
@@ -202,7 +202,7 @@ export default async function HomePage() {
               align="left"
               eyebrow="Portofolio"
               title="Proyek & produk aplikasi yang kami kerjakan"
-              description="Sistem yang kami bangun untuk kementerian, pemerintah daerah, dan perusahaan nasional — beserta produk aplikasi yang kami kembangkan sendiri."
+              description="Seluruh sistem yang kami bangun untuk kementerian, pemerintah daerah, dan perusahaan nasional — beserta produk aplikasi yang kami kembangkan sendiri, lengkap dengan tangkapan layar dasbor masing-masing."
               className="max-w-2xl"
             />
             <Link href="/proyek" className="btn-outline shrink-0">

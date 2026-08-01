@@ -155,5 +155,248 @@
     "year": 2023,
     "featured": true,
     "sort_order": 5
+  },
+  {
+    "slug": "qhse-enterprise-platform",
+    "title": "QHSE Enterprise Platform",
+    "summary": "Platform QHSE terpadu berbasis ISO 45001, 9001, 14001, dan 27001 — 19 domain fungsional mulai dari manajemen risiko, izin kerja, insiden, audit, hingga CAPA.",
+    "description": "QHSE Enterprise Platform adalah sistem manajemen Quality, Health, Safety & Environment untuk organisasi multi-lokasi. Dibangun sebagai monorepo dengan backend NestJS, frontend Next.js, dan basis data PostgreSQL.\n\nArsitekturnya multi-tenant sejak lapisan basis data: setiap kueri berjalan di bawah Row Level Security PostgreSQL, sehingga data satu perusahaan tidak pernah dapat terbaca oleh perusahaan lain — bukan sekadar penyaringan di sisi aplikasi. Autentikasi memakai OpenID Connect (Authorization Code + PKCE) dengan rotasi refresh token dan deteksi penggunaan ulang token, serta MFA berbasis TOTP yang diwajibkan untuk peran administratif.\n\nCakupan fungsionalnya 19 domain: Organization, User & Role, System Administration, Notification, Document Management, Regulatory & Compliance, Risk Management, Work Permit, Incident Management, Inspection, Emergency Response, Audit, CAPA, Quality, Environmental, Occupational Health, Asset & Equipment, Calibration, dan Contractor Management.",
+    "features": [
+      "Multi-tenant dengan Row Level Security PostgreSQL",
+      "Manajemen risiko dan penilaian bahaya (HIRADC)",
+      "Izin kerja (work permit) dengan alur persetujuan berjenjang",
+      "Pelaporan insiden, investigasi, dan tindak lanjut CAPA",
+      "Audit internal dan matriks kepatuhan regulasi",
+      "Manajemen dokumen, kalibrasi alat, dan aset K3",
+      "Autentikasi OIDC + PKCE, MFA TOTP, dan jejak audit tak dapat diubah",
+      "Design system dengan status badge, KPI card, dan workflow stepper"
+    ],
+    "tech": [
+      "NestJS",
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "Redis",
+      "Turborepo"
+    ],
+    "cover_image": "/images/apps/qhse-komponen-ui.jpg",
+    "gallery": [
+      "/images/apps/qhse-komponen-ui.jpg"
+    ],
+    "client": "Produk internal Semesta Teknologi Utama",
+    "category": "Aplikasi Enterprise",
+    "year": 2026,
+    "repo_name": "QHSE-ISO45001",
+    "repo_url": "https://github.com/DrOsmond-STU/QHSE-ISO45001",
+    "sort_order": 6,
+    "featured": true,
+    "source": "github",
+    "is_private": true
+  },
+  {
+    "slug": "vantik-analytics",
+    "title": "Vantik Analytics",
+    "summary": "Platform analitik perusahaan dengan 30 modul dalam 8 domain: cockpit eksekutif, balanced scorecard, analisis statistik, KPI, hingga tata kelola data.",
+    "description": "Vantik Analytics menyatukan eksplorasi data, pelaporan presisi, analitik berbantuan AI, manajemen KPI, dan tata kelola data dalam satu platform.\n\nPlatform ini bersifat domain-agnostic: seluruh modul bekerja pada struktur data generik (fact & dimension), sehingga metrik, dimensi, dan istilah sepenuhnya dikonfigurasi oleh organisasi pengguna — tidak ditanam di dalam kode. Data yang tampil di cockpit hanya bersumber dari dataset yang sudah berstatus Certified di Data Quality Center, sehingga setiap angka dapat ditelusuri sampai ke sumbernya.\n\nKontrol akses dijalankan berlapis: RBAC per modul, Row Level Security per wilayah, dan MFA wajib untuk peran istimewa. Seluruh aktivitas tercatat pada jejak audit append-only yang tidak dapat diubah siapa pun, termasuk administrator.\n\nDirancang agar tetap dapat dipasang di shared hosting cPanel tanpa Docker: keluaran CommonJS, tanpa modul native wajib, dan berkas basis data ditempatkan di luar document root.",
+    "features": [
+      "Executive Cockpit dan Operational Cockpit dengan ringkasan AI Narrative",
+      "Balanced Scorecard empat perspektif dengan skor komposit organisasi",
+      "KPI Center — definisi, bobot, target, dan ambang batas tertandardisasi",
+      "Dataset (unggah CSV/XLSX) dengan deteksi tipe kolom otomatis",
+      "Data Quality Center dan sertifikasi dataset",
+      "Analisis statistik: deskriptif, uji hipotesis, regresi & korelasi",
+      "Root Cause Analysis (Fishbone, 5 Why, Pareto) dan Digital Twin aset",
+      "RBAC per modul, Row Level Security per wilayah, dan MFA TOTP",
+      "Jejak audit append-only serta manajemen tenant, langganan, dan kuota"
+    ],
+    "tech": [
+      "Node.js",
+      "TypeScript",
+      "React",
+      "Vite",
+      "SQLite/PostgreSQL",
+      "Modular Monolith"
+    ],
+    "cover_image": "/images/apps/vantik-executive-cockpit.jpg",
+    "gallery": [
+      "/images/apps/vantik-executive-cockpit.jpg",
+      "/images/apps/vantik-balanced-scorecard.jpg",
+      "/images/apps/vantik-operational-cockpit.jpg",
+      "/images/apps/vantik-dataset.jpg",
+      "/images/apps/vantik-root-cause.jpg",
+      "/images/apps/vantik-digital-twin.jpg"
+    ],
+    "client": "Produk internal Semesta Teknologi Utama",
+    "category": "Analitik Data",
+    "year": 2026,
+    "repo_name": "Vantik-Analytics",
+    "repo_url": "https://github.com/DrOsmond-STU/Vantik-Analytics",
+    "sort_order": 7,
+    "featured": true,
+    "source": "github",
+    "is_private": true
+  },
+  {
+    "slug": "edms-document-governance",
+    "title": "EDMS — Enterprise Document Management System",
+    "summary": "Platform tata kelola dokumen lintas fungsi: satu sumber kebenaran untuk siklus hidup dokumen dari penyusunan, review, approval, distribusi, revisi, sampai pemusnahan.",
+    "description": "EDMS adalah platform Enterprise Document Governance — satu sumber kebenaran untuk seluruh siklus hidup dokumen: buat, review, setujui, distribusikan, revisi, arsipkan, retensi, hingga musnahkan.\n\nDirancang sejak awal untuk memenuhi standar sistem manajemen internasional (ISO 9001, 14001, 45001, 27001, 22301, 37001, 31000, 15489/30301, dan SMK3). Bukan alat milik satu departemen: platform ini dipakai lintas fungsi — Quality, HSE, Information Security, Legal, Finance, HR, dan IT — sementara aplikasi lain (ERP, HRIS) terhubung sebagai konsumen API, bukan pemilik data dokumen.\n\nArsitektur sasarannya 10 domain fungsional dan 30 modul, dengan kendali akses berbasis peran untuk 11 peran berbeda (Requester, Drafter, Reviewer, Approver, Document Controller, Ratifier, dan seterusnya).",
+    "features": [
+      "Register dokumen dengan penomoran otomatis dan penyaringan lintas fungsi/standar",
+      "Alur Draft → Review → Approval → Released → Obsolete dalam papan Kanban",
+      "Tracking penyusunan dokumen 8 tahap",
+      "Riwayat versi dan revisi setiap dokumen",
+      "Klasifikasi keamanan: Public, Internal, Restricted, Confidential, Secret",
+      "RBAC 11 peran dengan antarmuka yang menyesuaikan kewenangan",
+      "Jejak audit lengkap dan pusat notifikasi dalam aplikasi",
+      "Pelaporan & KPI per jenis, status, dan standar, dengan ekspor CSV"
+    ],
+    "tech": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "PHP/MySQL (paket cPanel)"
+    ],
+    "cover_image": "/images/apps/edms-dashboard.jpg",
+    "gallery": [
+      "/images/apps/edms-dashboard.jpg",
+      "/images/apps/edms-register-dokumen.jpg",
+      "/images/apps/edms-papan-approval.jpg",
+      "/images/apps/edms-tracking.jpg",
+      "/images/apps/edms-reporting-kpi.jpg"
+    ],
+    "client": "Produk internal Semesta Teknologi Utama",
+    "category": "Document Management",
+    "year": 2026,
+    "repo_name": "EDMS-Document-Management-System",
+    "repo_url": "https://github.com/DrOsmond-STU/EDMS-Document-Management-System",
+    "sort_order": 8,
+    "featured": true,
+    "source": "github",
+    "is_private": true
+  },
+  {
+    "slug": "sistem-informasi-koperasi-simpan-pinjam",
+    "title": "Sistem Informasi Koperasi Simpan Pinjam",
+    "summary": "Aplikasi koperasi simpan pinjam multi-cabang: simpanan, pinjaman, akuntansi SAK EP, persediaan, aset tetap, POS, sampai laporan RAT.",
+    "description": "Sistem informasi koperasi simpan pinjam untuk koperasi dengan banyak cabang. Seluruh transaksi simpanan, pinjaman, kas, persediaan, dan aset tetap terjurnal otomatis ke buku besar, sehingga neraca dan laba rugi selalu sejalan dengan transaksi operasional.\n\nDashboard utama menyajikan konsolidasi seluruh cabang sekaligus dapat difilter per cabang: total anggota, total simpanan, pinjaman outstanding, SHU berjalan, aktivitas harian, dan daftar angsuran jatuh tempo.\n\nDibangun dengan Laravel dan dirancang agar dapat dipasang di shared hosting cPanel biasa melalui wizard instalasi berbasis browser — tanpa SSH, tanpa Supervisor, dan otomatis beralih ke session/cache/queue berbasis basis data bila Redis tidak tersedia.",
+    "features": [
+      "Dashboard konsolidasi multi-cabang dengan filter per cabang",
+      "Simpanan: pokok, wajib, sukarela, dan produk simpanan berjangka",
+      "Pinjaman: pengajuan, persetujuan berjenjang, pencairan, dan angsuran",
+      "Akuntansi lengkap — bagan akun SAK EP, jurnal umum, buku besar, neraca, laba rugi",
+      "Perhitungan dan alokasi SHU",
+      "Persediaan, kasir (POS), unit usaha, dan retribusi",
+      "Aktiva tetap dengan penyusutan, barcode, dan pelepasan aset",
+      "Kartu anggota, notifikasi jatuh tempo, kalender kegiatan, dan laporan RAT",
+      "Wizard instalasi berbasis browser untuk shared hosting cPanel",
+      "Kendali akses berbasis peran dengan 2FA dan jejak audit keamanan"
+    ],
+    "tech": [
+      "Laravel 13",
+      "PHP 8",
+      "MySQL",
+      "Tailwind CSS",
+      "Vite"
+    ],
+    "cover_image": "/images/apps/koperasi-dashboard.jpg",
+    "gallery": [
+      "/images/apps/koperasi-dashboard.jpg",
+      "/images/apps/koperasi-anggota.jpg",
+      "/images/apps/koperasi-pinjaman.jpg",
+      "/images/apps/koperasi-laporan-keuangan.jpg",
+      "/images/apps/koperasi-kas-bank.jpg",
+      "/images/apps/koperasi-aktiva-tetap.jpg"
+    ],
+    "client": "Produk internal Semesta Teknologi Utama",
+    "category": "Aplikasi Enterprise",
+    "year": 2026,
+    "repo_name": "Koperasi-KSP-Laravel",
+    "repo_url": "https://github.com/DrOsmond-STU/Koperasi-KSP-Laravel",
+    "sort_order": 9,
+    "featured": true,
+    "source": "github",
+    "is_private": true
+  },
+  {
+    "slug": "portal-distanik-murung-raya",
+    "title": "Portal DISTANIK Kabupaten Murung Raya",
+    "summary": "Portal dan panel admin Dinas Pertanian dan Perikanan Kabupaten Murung Raya — pusat data, peta sebaran, harga pangan, dan layanan SIMLUHTAN, e-RDKK, PIP, serta CPCL.",
+    "description": "Portal resmi Dinas Pertanian dan Perikanan (DISTANIK) Kabupaten Murung Raya, Provinsi Kalimantan Tengah. Struktur menu dan kanal datanya disusun mengikuti Perbup Nomor 55 Tahun 2022 tentang kedudukan, susunan organisasi, tugas, dan fungsi dinas.\n\nSisi publik memuat profil dinas, pusat data (keuangan, aset, spasial, perencanaan, teknis), peta sebaran per kecamatan, layanan SIMLUHTAN, e-RDKK, informasi harga pangan (PIP), dan CPCL, serta kanal berita, galeri, dan PPID.\n\nSisi admin menyediakan dasbor jadwal pemutakhiran data beserta status kelengkapannya, formulir unggah dokumen, input harga pangan mingguan, pengelolaan berkas spasial, manajemen pengguna dan matriks hak input, serta jejak audit.\n\nPeta sebaran digambar dengan mesin peta slippy buatan sendiri (proyeksi, tile, geser, zoom, penanda) dan seluruh ilustrasi berupa SVG buatan sendiri — tanpa aset eksternal.",
+    "features": [
+      "Dasbor admin: jadwal pemutakhiran data dan status kelengkapan per kanal",
+      "Pusat data dengan tab keuangan, aset, spasial, perencanaan, dan teknis",
+      "Peta sebaran per kecamatan dengan mesin peta slippy buatan sendiri",
+      "Input dan publikasi harga pangan mingguan (PIP)",
+      "Layanan SIMLUHTAN, e-RDKK, dan CPCL",
+      "Pengelolaan berita, galeri, dan layanan PPID",
+      "Manajemen pengguna, peran, dan matriks hak input",
+      "Jejak audit serta pengaturan identitas situs dan kebijakan data",
+      "Mode gelap, gaya cetak, dan design system bergradasi hijau–teal–amber"
+    ],
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Design System",
+      "GIS (slippy map)"
+    ],
+    "cover_image": "/images/apps/distanik-dasbor-admin.jpg",
+    "gallery": [
+      "/images/apps/distanik-dasbor-admin.jpg",
+      "/images/apps/distanik-beranda.jpg",
+      "/images/apps/distanik-pusat-data.jpg",
+      "/images/apps/distanik-peta.jpg",
+      "/images/apps/distanik-harga-pangan.jpg"
+    ],
+    "client": "Dinas Pertanian dan Perikanan Kabupaten Murung Raya",
+    "category": "Instansi Pemerintah",
+    "year": 2026,
+    "repo_name": "distanik-murungraya",
+    "repo_url": "https://github.com/DrOsmond-STU/distanik-murungraya",
+    "sort_order": 10,
+    "featured": true,
+    "source": "github",
+    "is_private": true
+  },
+  {
+    "slug": "platform-analitik-data-enterprise",
+    "title": "Platform Analitik Data Enterprise",
+    "summary": "Edisi microservices dari platform analitik: identity, audit, dan data platform berjalan sebagai layanan terpisah dengan basis data masing-masing.",
+    "description": "Edisi microservices dari platform analitik perusahaan. Tiga layanan berjalan terpisah — identity-service (master pegawai, otorisasi, autentikasi, RBAC), audit-service (log aktivitas append-only), dan data-platform-service (dataset, koneksi eksternal, data modeling, data quality center, KPI center) — masing-masing dengan basis datanya sendiri.\n\nPemisahan basis data ini disengaja: log audit tidak boleh berbagi basis data dengan data operasional, sehingga jejak aktivitas tetap utuh meski layanan operasional bermasalah.\n\nSetiap akun dibuat hanya oleh Super Admin yang sudah terautentikasi, dan peran SUPER_ADMIN serta DATA_ENGINEER wajib mendaftarkan MFA pada login pertama. Dataset yang diunggah divalidasi, di-parse, ditentukan tipe kolomnya, lalu otomatis dinilai oleh Data Quality Center sebelum boleh dipakai.",
+    "features": [
+      "Arsitektur microservices — identity, audit, dan data platform terpisah",
+      "Basis data terpisah per layanan; log audit tidak bercampur data operasional",
+      "Unggah dataset CSV/XLSX dengan validasi dan deteksi tipe kolom otomatis",
+      "Data Quality Center dengan ambang sertifikasi dataset",
+      "KPI Center, data modeling, dan koneksi ke sumber data eksternal",
+      "Master pegawai dan otorisasi user berbasis RBAC",
+      "MFA wajib untuk peran istimewa dan penguncian akun setelah percobaan gagal",
+      "Dwibahasa (Indonesia/Inggris) serta mode terang dan gelap"
+    ],
+    "tech": [
+      "NestJS",
+      "TypeORM",
+      "PostgreSQL",
+      "React",
+      "Vite",
+      "Microservices"
+    ],
+    "cover_image": "/images/apps/analitik-enterprise-dataset.jpg",
+    "gallery": [
+      "/images/apps/analitik-enterprise-dataset.jpg"
+    ],
+    "client": "Produk internal Semesta Teknologi Utama",
+    "category": "Analitik Data",
+    "year": 2026,
+    "repo_name": "data-analitik-enterprise",
+    "repo_url": "https://github.com/DrOsmond-STU/data-analitik-enterprise",
+    "sort_order": 11,
+    "featured": true,
+    "source": "github",
+    "is_private": true
   }
 ]
