@@ -173,7 +173,11 @@ export function SiteFooter({ settings, services }: { settings: SettingsMap; serv
 
         <div className="divider-gradient rounded-full opacity-70" />
 
-        <div className="flex flex-col gap-3 py-6 text-[13px] text-brand-100/60 sm:flex-row sm:items-center sm:justify-between">
+        {/*
+         * Ruang bawah-kanan disisakan untuk tombol chat WhatsApp yang
+         * mengambang, supaya tautan baris ini tidak tertutup olehnya.
+         */}
+        <div className="flex flex-col gap-3 py-6 pb-24 text-[13px] text-brand-100/60 sm:flex-row sm:items-center sm:justify-between sm:pb-6 sm:pr-24">
           <p>
             © {year} {settings.company_name}. Seluruh hak cipta dilindungi.
           </p>

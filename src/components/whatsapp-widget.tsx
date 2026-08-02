@@ -31,13 +31,50 @@ export function WhatsAppWidget({
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
-  // Gelembung ajakan muncul sekali per sesi setelah beberapa detik.
+  /**
+   * Gelembung ajakan muncul sekali per sesi, tetapi hanya setelah pengguna
+   * menggulir melewati bagian hero. Di layar ponsel gelembung ini duduk tepat
+   * di atas tombol mengambang dan sempat menutupi tombol "Konsultasi Gratis"
+   * serta titik navigasi hero — menunggu guliran membuat area itu sudah lewat
+   * sebelum gelembung muncul. Gelembung juga menghilang sendiri setelah 12
+   * detik agar tidak menghalangi konten di bawahnya.
+   */
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (window.sessionStorage.getItem('stu_wa_nudge') === 'seen') return;
 
-    const timer = window.setTimeout(() => setNudge(true), 6000);
-    return () => window.clearTimeout(timer);
+    let siap = false;
+    let sudahGulir = window.scrollY > 320;
+    let sembunyi: number | undefined;
+
+    const tampilkan = () => {
+      if (!siap || !sudahGulir) return;
+      setNudge(true);
+      window.removeEventListener('scroll', onScroll);
+      sembunyi = window.setTimeout(() => {
+        setNudge(false);
+        window.sessionStorage.setItem('stu_wa_nudge', 'seen');
+      }, 12000);
+    };
+
+    const onScroll = () => {
+      if (window.scrollY > 320) {
+        sudahGulir = true;
+        tampilkan();
+      }
+    };
+
+    const jeda = window.setTimeout(() => {
+      siap = true;
+      tampilkan();
+    }, 6000);
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.clearTimeout(jeda);
+      if (sembunyi) window.clearTimeout(sembunyi);
+      window.removeEventListener('scroll', onScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -69,7 +106,16 @@ export function WhatsAppWidget({
   };
 
   return (
-    <div className="fixed bottom-5 right-5 z-[60] flex flex-col items-end gap-3 sm:bottom-7 sm:right-7">
+    /*
+     * `pointer-events-none` pada pembungkus ini WAJIB. Panel percakapan tetap
+     * berada di alur tata letak saat tertutup (supaya animasinya mulus), jadi
+     * pembungkus ini selalu setinggi panel — sekitar 526 px. Tanpa baris itu,
+     * kotak tak terlihat tersebut menelan klik di seluruh area kanan layar,
+     * termasuk tombol "Hubungi Kami" di header pada layar yang pendek.
+     * Setiap elemen yang memang dapat diklik mengaktifkan kembali lewat
+     * `pointer-events-auto`.
+     */
+    <div className="pointer-events-none fixed bottom-5 right-5 z-[60] flex flex-col items-end gap-3 sm:bottom-7 sm:right-7">
       {/* Panel percakapan */}
       <div
         ref={panelRef}
@@ -176,7 +222,7 @@ export function WhatsAppWidget({
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="animate-fade-up max-w-[250px] rounded-2xl rounded-br-sm bg-white px-4 py-3 text-left text-[13px] font-semibold leading-snug text-ink-800 shadow-lift"
+          className="animate-fade-up pointer-events-auto max-w-[250px] rounded-2xl rounded-br-sm bg-white px-4 py-3 text-left text-[13px] font-semibold leading-snug text-ink-800 shadow-lift"
         >
           Butuh bantuan? Chat tim kami sekarang 👋
         </button>
@@ -188,10 +234,15 @@ export function WhatsAppWidget({
         onClick={() => setOpen((value) => !value)}
         aria-label={open ? 'Tutup chat WhatsApp' : 'Buka chat WhatsApp'}
         aria-expanded={open}
-        className="group relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_14px_38px_-10px_rgba(37,211,102,.9)] transition-all duration-300 hover:scale-105 sm:h-[60px] sm:w-[60px]"
+        className="group pointer-events-auto relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_14px_38px_-10px_rgba(37,211,102,.9)] transition-all duration-300 hover:scale-105 sm:h-[60px] sm:w-[60px]"
       >
+        {/*
+         * `animate-ping` membesarkan cincin ini sampai dua kali ukuran tombol,
+         * jadi tanpa `pointer-events-none` ia menelan klik pada elemen di
+         * sekitarnya (mis. tautan footer dan titik navigasi hero).
+         */}
         {!open ? (
-          <span className="absolute inset-0 animate-ping rounded-full bg-[#25D366] opacity-25" />
+          <span className="pointer-events-none absolute inset-0 animate-ping rounded-full bg-[#25D366] opacity-25" />
         ) : null}
         <span className="relative">
           {open ? (

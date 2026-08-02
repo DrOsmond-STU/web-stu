@@ -170,7 +170,10 @@ export function HeroSlider({
 
         {/* Kendali slider */}
         {total > 1 ? (
-          <div className="mt-14 flex items-center gap-5">
+          /* `pr-20` di layar kecil menyisakan ruang untuk tombol chat WhatsApp
+             yang mengambang di kanan bawah, agar titik slide terakhir tetap
+             dapat ditekan. */
+          <div className="mt-14 flex items-center gap-5 pr-20 sm:pr-0">
             <div className="flex gap-2">
               <button
                 type="button"
