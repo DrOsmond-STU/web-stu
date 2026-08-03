@@ -1,0 +1,134 @@
+[
+  {
+    "title": "Unity Certified User — Artist",
+    "vendor": "Unity Technologies",
+    "holder": "Darmawan Subuh",
+    "issued_on": "2 November 2024",
+    "credential_id": "wCCAu-48Hs",
+    "verify_url": "https://verify.certiport.com/",
+    "image": "/images/sertifikasi/unity-certified-user-artist.jpg",
+    "sort_order": 1,
+    "published": false
+  },
+  {
+    "title": "IT Specialist — Cybersecurity",
+    "vendor": "Pearson VUE / Certiport",
+    "holder": "Darmawan Subuh",
+    "issued_on": "14 Januari 2025",
+    "credential_id": "mTVp-uT27",
+    "verify_url": "https://verify.certiport.com/",
+    "image": "/images/sertifikasi/it-specialist-cybersecurity.jpg",
+    "sort_order": 2,
+    "published": false
+  },
+  {
+    "title": "Cisco Certified Support Technician — Cybersecurity",
+    "vendor": "Cisco",
+    "holder": "Darmawan Subuh",
+    "issued_on": "15 Januari 2025",
+    "credential_id": "eNLy-4wyY",
+    "verify_url": "https://verify.certiport.com/",
+    "image": "/images/sertifikasi/cisco-ccst-cybersecurity.jpg",
+    "sort_order": 3,
+    "published": false
+  },
+  {
+    "title": "Microsoft Dynamics 365 Fundamentals — Finance & Operations",
+    "vendor": "Microsoft",
+    "holder": "Darmawan Subuh",
+    "issued_on": "14 Januari 2025",
+    "credential_id": "wCo9M-48Rr",
+    "verify_url": "https://verify.certiport.com/",
+    "image": "/images/sertifikasi/microsoft-dynamics-365-erp.jpg",
+    "sort_order": 4,
+    "published": false
+  },
+  {
+    "title": "Generative AI Foundations",
+    "vendor": "Certiport",
+    "holder": "Darmawan Subuh",
+    "issued_on": "13 Januari 2025",
+    "credential_id": "wLMGz-H9ob",
+    "verify_url": "https://verify.certiport.com/",
+    "image": "/images/sertifikasi/generative-ai-foundations.jpg",
+    "sort_order": 5,
+    "published": false
+  },
+  {
+    "title": "Meta Certified Digital Marketing Associate",
+    "vendor": "Meta",
+    "holder": "Darmawan Subuh",
+    "issued_on": "14 Januari 2025",
+    "credential_id": "wAQE2-2F4N",
+    "verify_url": "https://verify.certiport.com/",
+    "image": "/images/sertifikasi/meta-digital-marketing-associate.jpg",
+    "sort_order": 6,
+    "published": false
+  },
+  {
+    "title": "PMI Project Management Ready",
+    "vendor": "Project Management Institute (PMI)",
+    "holder": "Darmawan Subuh",
+    "issued_on": "14 Mei 2024",
+    "credential_id": "wbkAY-H92N",
+    "verify_url": "https://verify.certiport.com/",
+    "image": "/images/sertifikasi/pmi-project-management-ready.jpg",
+    "sort_order": 7,
+    "published": false
+  },
+  {
+    "title": "Microsoft Security, Compliance & Identity Fundamentals",
+    "vendor": "Microsoft",
+    "holder": "Darmawan Subuh",
+    "issued_on": "14 Januari 2025",
+    "credential_id": "usXa-XMVS",
+    "verify_url": "https://verify.certiport.com/",
+    "image": "/images/sertifikasi/microsoft-sc-900.jpg",
+    "sort_order": 8,
+    "published": false
+  },
+  {
+    "title": "PASAS Certified Data Engineer",
+    "vendor": "PASAS Institute Singapore",
+    "holder": "Anggi Andriyadi",
+    "issued_on": "29 April 2026",
+    "credential_id": "PPDE14281",
+    "verify_url": "",
+    "image": "/images/sertifikasi/pasas-certified-data-engineer.jpg",
+    "sort_order": 9,
+    "published": false
+  },
+  {
+    "title": "PASAS Certified Development Operations Engineer — Professional",
+    "vendor": "PASAS Institute Singapore",
+    "holder": "Andi Kasyadi",
+    "issued_on": "29 April 2026",
+    "credential_id": "PCDOEP17511",
+    "verify_url": "",
+    "image": "/images/sertifikasi/pasas-devops-engineer-kasyadi.jpg",
+    "sort_order": 10,
+    "published": false
+  },
+  {
+    "title": "PASAS Certified Development Operations Engineer — Professional",
+    "vendor": "PASAS Institute Singapore",
+    "holder": "Tetrapraja Utama",
+    "issued_on": "29 April 2026",
+    "credential_id": "PCDOEP17514",
+    "verify_url": "",
+    "image": "/images/sertifikasi/pasas-devops-engineer-tetrapraja.jpg",
+    "sort_order": 11,
+    "published": false
+  },
+  {
+    "title": "PASAS Professional UX Design Certificate",
+    "vendor": "PASAS Institute Singapore",
+    "holder": "Dodi Saprianto",
+    "issued_on": "29 April 2026",
+    "credential_id": "PPUDC15323",
+    "verify_url": "",
+    "image": "/images/sertifikasi/pasas-professional-ux-design.jpg",
+    "sort_order": 12,
+    "published": false
+  }
+]

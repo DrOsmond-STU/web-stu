@@ -5,7 +5,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import {
+  IconAward,
   IconBriefcase,
+  IconBuilding,
+  IconCertificate,
   IconClose,
   IconDashboard,
   IconExternal,
@@ -32,6 +35,9 @@ const ICONS: Record<string, typeof IconLayers> = {
   dashboard: IconDashboard,
   inbox: IconInbox,
   settings: IconSettings,
+  building: IconBuilding,
+  badge: IconCertificate,
+  award: IconAward,
 };
 
 export type NavGroup = {

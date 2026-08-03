@@ -12,6 +12,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: absoluteUrl('/'), lastModified: now, changeFrequency: 'weekly', priority: 1 },
     { url: absoluteUrl('/tentang-kami'), lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: absoluteUrl('/layanan'), lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: absoluteUrl('/sertifikasi'), lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: absoluteUrl('/proyek'), lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: absoluteUrl('/pengalaman'), lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: absoluteUrl('/galeri'), lastModified: now, changeFrequency: 'monthly', priority: 0.7 },

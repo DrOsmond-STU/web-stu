@@ -29,6 +29,8 @@ const experiences = read('experiences.json');
 const team = read('team.json');
 const gallery = read('gallery.json');
 const clients = read('clients.json');
+const certifications = read('certifications.json');
+const certificateProofs = read('certificate-proofs.json');
 const testimonials = read('testimonials.json');
 const posts = read('posts.json');
 
@@ -50,7 +52,7 @@ try {
   if (reset) {
     console.log('⚠️  Mode --reset: mengosongkan seluruh tabel konten…');
     await q(
-      'TRUNCATE settings, services, projects, testimonials, posts, team_members, experiences, gallery_items, clients RESTART IDENTITY',
+      'TRUNCATE settings, services, projects, testimonials, posts, team_members, experiences, gallery_items, clients, certifications, certificate_proofs RESTART IDENTITY',
     );
   }
 
@@ -148,6 +150,32 @@ try {
     );
   }
   console.log(`✅ ${clients.length} klien & mitra (unggah logonya lewat CMS)`);
+
+  // --------------------------------------------------------- sertifikasi
+  for (const c of certifications) {
+    await q(
+      `INSERT INTO certifications (name, vendor, scheme, exam_fee, field, also_for, priority, summary, sort_order)
+       SELECT $1,$2,$3,$4,$5,$6,$7,$8,$9
+       WHERE NOT EXISTS (SELECT 1 FROM certifications WHERE name = $1 AND vendor = $2)`,
+      [c.name, c.vendor, c.scheme, c.exam_fee, c.field, c.also_for, c.priority, c.summary, c.sort_order],
+    );
+  }
+  console.log(`✅ ${certifications.length} skema sertifikasi`);
+
+  // ------------------------------------------------------- bukti sertifikat
+  // Sengaja disimpan sebagai DRAFT (published = false) karena memuat nama
+  // pemegang dan nomor verifikasi. Terbitkan lewat CMS hanya yang sudah
+  // disetujui pemiliknya.
+  for (const b of certificateProofs) {
+    await q(
+      `INSERT INTO certificate_proofs
+        (title, vendor, holder, issued_on, credential_id, verify_url, image, sort_order, published)
+       SELECT $1,$2,$3,$4,$5,$6,$7,$8,$9
+       WHERE NOT EXISTS (SELECT 1 FROM certificate_proofs WHERE title = $1 AND holder = $3)`,
+      [b.title, b.vendor, b.holder, b.issued_on, b.credential_id, b.verify_url, b.image, b.sort_order, b.published ?? false],
+    );
+  }
+  console.log(`✅ ${certificateProofs.length} bukti sertifikat (status DRAFT — terbitkan lewat CMS bila pemiliknya setuju)`);
 
   // --------------------------------------------------------------- testimoni
   // Sengaja disimpan sebagai DRAFT (published = false). Isi dengan testimoni

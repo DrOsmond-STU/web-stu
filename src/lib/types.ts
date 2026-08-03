@@ -94,6 +94,34 @@ export type Experience = {
   published: boolean;
 };
 
+export type Certification = {
+  id: number;
+  name: string;
+  vendor: string;
+  /** 'internasional' (Certiport / PASAS) atau 'nasional' (BNSP / LSP). */
+  scheme: string;
+  exam_fee: number | null;
+  field: string;
+  also_for: string;
+  priority: string;
+  summary: string;
+  sort_order: number;
+  published: boolean;
+};
+
+export type CertificateProof = {
+  id: number;
+  title: string;
+  vendor: string;
+  holder: string;
+  issued_on: string;
+  credential_id: string;
+  verify_url: string;
+  image: string | null;
+  sort_order: number;
+  published: boolean;
+};
+
 export type Client = {
   id: number;
   name: string;

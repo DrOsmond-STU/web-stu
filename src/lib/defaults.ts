@@ -27,6 +27,7 @@ export const SETTING_GROUPS: { id: string; label: string; description: string }[
   { id: 'kontak', label: 'Kontak & WhatsApp', description: 'Nomor WhatsApp, telepon, email & peta lokasi' },
   { id: 'beranda', label: 'Beranda', description: 'Teks hero, slide, statistik & ajakan bertindak' },
   { id: 'tentang', label: 'Tentang Kami', description: 'Profil, visi, misi & nilai perusahaan' },
+  { id: 'sertifikasi', label: 'Sertifikasi', description: 'Teks halaman sertifikasi, mitra & katalog' },
   { id: 'seo', label: 'SEO & Verifikasi', description: 'Judul meta, deskripsi, kata kunci & Search Console' },
   { id: 'sosial', label: 'Media Sosial', description: 'Tautan akun media sosial perusahaan' },
 ];

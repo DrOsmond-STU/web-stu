@@ -1,5 +1,7 @@
 import { safeQuery } from '@/lib/db';
 import { DEFAULT_SETTINGS_MAP } from '@/lib/defaults';
+import certificationsData from '@/data/certifications.json';
+import certificateProofsData from '@/data/certificate-proofs.json';
 import clientsData from '@/data/clients.json';
 import galleryData from '@/data/gallery.json';
 import projectsData from '@/data/projects.json';
@@ -8,6 +10,8 @@ import servicesData from '@/data/services.json';
 import teamData from '@/data/team.json';
 import experiencesData from '@/data/experiences.json';
 import type {
+  CertificateProof,
+  Certification,
   Client,
   Experience,
   GalleryItem,
@@ -89,6 +93,20 @@ const fallbackClients: Client[] = (clientsData as never[]).map((c: any, i) => ({
   logo: c.logo ?? null,
   website: c.website ?? null,
   sort_order: c.sort_order ?? i,
+  published: true,
+}));
+
+const fallbackCertifications: Certification[] = (certificationsData as never[]).map((c: any, i) => ({
+  id: i + 1,
+  name: c.name,
+  vendor: c.vendor ?? '',
+  scheme: c.scheme ?? 'internasional',
+  exam_fee: c.exam_fee ?? null,
+  field: c.field ?? '',
+  also_for: c.also_for ?? '',
+  priority: c.priority ?? '',
+  summary: c.summary ?? '',
+  sort_order: c.sort_order ?? i + 1,
   published: true,
 }));
 
@@ -281,6 +299,29 @@ export async function getClients(): Promise<Client[]> {
     'SELECT * FROM clients WHERE published = TRUE ORDER BY sort_order, id',
   );
   return rows.length ? rows : fallbackClients;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Sertifikasi kompetensi                                                    */
+/* -------------------------------------------------------------------------- */
+
+export async function getCertifications(): Promise<Certification[]> {
+  const rows = await safeQuery<Certification>(
+    'SELECT * FROM certifications WHERE published = TRUE ORDER BY sort_order, id',
+  );
+  return rows.length ? rows : fallbackCertifications;
+}
+
+/**
+ * Bukti sertifikat memuat nama pemegang dan nomor verifikasi — data pribadi.
+ * Tidak ada data cadangan di sini: yang tampil hanya baris yang benar-benar
+ * diterbitkan lewat CMS, sehingga tidak ada nama yang terpublikasi tanpa
+ * keputusan sadar dari pemilik situs.
+ */
+export async function getCertificateProofs(): Promise<CertificateProof[]> {
+  return safeQuery<CertificateProof>(
+    'SELECT * FROM certificate_proofs WHERE published = TRUE ORDER BY sort_order, id',
+  );
 }
 
 export async function getExperiences(): Promise<Experience[]> {

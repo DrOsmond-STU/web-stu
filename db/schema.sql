@@ -161,6 +161,41 @@ ALTER TABLE clients ADD COLUMN IF NOT EXISTS website    TEXT;
 ALTER TABLE clients ADD COLUMN IF NOT EXISTS created_at TIMESTAMPTZ NOT NULL DEFAULT NOW();
 ALTER TABLE clients ADD COLUMN IF NOT EXISTS updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW();
 
+-- Katalog skema sertifikasi kompetensi yang dapat diikuti lewat kami.
+CREATE TABLE IF NOT EXISTS certifications (
+  id         SERIAL PRIMARY KEY,
+  name       TEXT NOT NULL,
+  vendor     TEXT NOT NULL DEFAULT '',
+  -- 'internasional' (Certiport / PASAS) atau 'nasional' (BNSP / LSP)
+  scheme     TEXT NOT NULL DEFAULT 'internasional',
+  exam_fee   INTEGER,
+  field      TEXT NOT NULL DEFAULT '',
+  also_for   TEXT NOT NULL DEFAULT '',
+  priority   TEXT NOT NULL DEFAULT '',
+  summary    TEXT NOT NULL DEFAULT '',
+  sort_order INTEGER NOT NULL DEFAULT 0,
+  published  BOOLEAN NOT NULL DEFAULT TRUE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+-- Bukti sertifikat yang sudah diraih. Memuat nama pemegang, jadi baris di sini
+-- sengaja berstatus draf sampai pemiliknya sendiri memutuskan untuk menerbitkan.
+CREATE TABLE IF NOT EXISTS certificate_proofs (
+  id            SERIAL PRIMARY KEY,
+  title         TEXT NOT NULL,
+  vendor        TEXT NOT NULL DEFAULT '',
+  holder        TEXT NOT NULL DEFAULT '',
+  issued_on     TEXT NOT NULL DEFAULT '',
+  credential_id TEXT NOT NULL DEFAULT '',
+  verify_url    TEXT NOT NULL DEFAULT '',
+  image         TEXT,
+  sort_order    INTEGER NOT NULL DEFAULT 0,
+  published     BOOLEAN NOT NULL DEFAULT FALSE,
+  created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
 CREATE TABLE IF NOT EXISTS messages (
   id         SERIAL PRIMARY KEY,
   name       TEXT NOT NULL,

@@ -13,6 +13,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Beranda', href: '/' },
   { label: 'Tentang Kami', href: '/tentang-kami' },
   { label: 'Layanan', href: '/layanan' },
+  { label: 'Sertifikasi', href: '/sertifikasi' },
   { label: 'Proyek', href: '/proyek' },
   { label: 'Pengalaman', href: '/pengalaman' },
   { label: 'Galeri', href: '/galeri' },

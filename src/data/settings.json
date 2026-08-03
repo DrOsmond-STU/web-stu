@@ -379,5 +379,161 @@
     "group": "sosial",
     "label": "GitHub",
     "type": "text"
+  },
+  {
+    "key": "sertifikasi_eyebrow",
+    "value": "Sertifikasi Kompetensi",
+    "group": "sertifikasi",
+    "label": "Label Kecil di Atas Judul",
+    "type": "text"
+  },
+  {
+    "key": "sertifikasi_title",
+    "value": "Sertifikasi Kompetensi Internasional & Nasional",
+    "group": "sertifikasi",
+    "label": "Judul Halaman",
+    "type": "text"
+  },
+  {
+    "key": "sertifikasi_subtitle",
+    "value": "Kami memfasilitasi uji kompetensi bagi mahasiswa, tenaga pendidik, dan profesional — dari sertifikasi vendor internasional hingga sertifikasi nasional berlisensi BNSP.",
+    "group": "sertifikasi",
+    "label": "Deskripsi Halaman",
+    "type": "textarea"
+  },
+  {
+    "key": "sertifikasi_intl_title",
+    "value": "Sertifikasi Internasional",
+    "group": "sertifikasi",
+    "label": "Judul Program Internasional",
+    "type": "text"
+  },
+  {
+    "key": "sertifikasi_intl_body",
+    "value": "Diselenggarakan bersama **PT Kita Teknologi Indonesia** sebagai mitra penyelenggara, melalui dua jalur uji: **Certiport (Pearson VUE)** untuk sertifikasi vendor seperti Microsoft, Cisco, Adobe, Meta, Unity, dan PMI; serta **PASAS Academy Singapore** untuk sertifikasi profesi di bidang data engineering, DevOps, dan UX design.\n\nSeluruh ujian dilaksanakan secara daring dengan pengawasan resmi, dan sertifikatnya dapat diverifikasi langsung pada situs penerbit.",
+    "group": "sertifikasi",
+    "label": "Penjelasan Program Internasional",
+    "type": "markdown"
+  },
+  {
+    "key": "sertifikasi_intl_partner_1_name",
+    "value": "Certiport — Pearson VUE",
+    "group": "sertifikasi",
+    "label": "Mitra Internasional 1 — Nama",
+    "type": "text"
+  },
+  {
+    "key": "sertifikasi_intl_partner_1_url",
+    "value": "https://certiport.pearsonvue.com/",
+    "group": "sertifikasi",
+    "label": "Mitra Internasional 1 — Tautan",
+    "type": "text"
+  },
+  {
+    "key": "sertifikasi_intl_partner_2_name",
+    "value": "PASAS Academy Singapore",
+    "group": "sertifikasi",
+    "label": "Mitra Internasional 2 — Nama",
+    "type": "text"
+  },
+  {
+    "key": "sertifikasi_intl_partner_2_url",
+    "value": "https://www.pasas.sg/",
+    "group": "sertifikasi",
+    "label": "Mitra Internasional 2 — Tautan",
+    "type": "text"
+  },
+  {
+    "key": "sertifikasi_intl_partner_3_name",
+    "value": "PT Kita Teknologi Indonesia",
+    "group": "sertifikasi",
+    "label": "Mitra Penyelenggara — Nama",
+    "type": "text"
+  },
+  {
+    "key": "sertifikasi_intl_partner_3_url",
+    "value": "",
+    "group": "sertifikasi",
+    "label": "Mitra Penyelenggara — Tautan",
+    "type": "text",
+    "hint": "Boleh dikosongkan bila belum ada situs resminya."
+  },
+  {
+    "key": "sertifikasi_bnsp_title",
+    "value": "Sertifikasi Nasional BNSP",
+    "group": "sertifikasi",
+    "label": "Judul Program BNSP",
+    "type": "text"
+  },
+  {
+    "key": "sertifikasi_bnsp_body",
+    "value": "Diselenggarakan bersama **LSP Media Informatika**, Lembaga Sertifikasi Profesi berlisensi **Badan Nasional Sertifikasi Profesi (BNSP)**.\n\nSertifikat BNSP diakui secara nasional sebagai bukti kompetensi kerja sesuai Standar Kompetensi Kerja Nasional Indonesia (SKKNI) — banyak dipersyaratkan dalam pengadaan pemerintah, rekrutmen BUMN, dan akreditasi program studi.",
+    "group": "sertifikasi",
+    "label": "Penjelasan Program BNSP",
+    "type": "markdown"
+  },
+  {
+    "key": "sertifikasi_bnsp_partner_name",
+    "value": "LSP Media Informatika",
+    "group": "sertifikasi",
+    "label": "Mitra BNSP — Nama",
+    "type": "text"
+  },
+  {
+    "key": "sertifikasi_bnsp_partner_url",
+    "value": "https://lspmi.co.id/",
+    "group": "sertifikasi",
+    "label": "Mitra BNSP — Tautan",
+    "type": "text"
+  },
+  {
+    "key": "sertifikasi_tampilkan_biaya",
+    "value": "true",
+    "group": "sertifikasi",
+    "label": "Tampilkan Biaya Ujian",
+    "type": "boolean",
+    "hint": "Matikan bila daftar biaya tidak ingin ditampilkan ke publik."
+  },
+  {
+    "key": "sertifikasi_katalog_title",
+    "value": "Katalog Skema Sertifikasi",
+    "group": "sertifikasi",
+    "label": "Judul Katalog",
+    "type": "text"
+  },
+  {
+    "key": "sertifikasi_katalog_note",
+    "value": "Biaya di bawah adalah biaya ujian per skema dan dapat berubah sewaktu-waktu mengikuti ketentuan penerbit. Hubungi kami untuk penawaran kelas atau kuota institusi.",
+    "group": "sertifikasi",
+    "label": "Catatan di Bawah Katalog",
+    "type": "textarea"
+  },
+  {
+    "key": "sertifikasi_bukti_title",
+    "value": "Bukti Kompetensi",
+    "group": "sertifikasi",
+    "label": "Judul Bagian Bukti Sertifikat",
+    "type": "text"
+  },
+  {
+    "key": "sertifikasi_bukti_subtitle",
+    "value": "Sertifikat yang telah diraih tim dan peserta kami.",
+    "group": "sertifikasi",
+    "label": "Deskripsi Bagian Bukti Sertifikat",
+    "type": "textarea"
+  },
+  {
+    "key": "sertifikasi_cta_title",
+    "value": "Ingin menyertifikasi tim atau mahasiswa Anda?",
+    "group": "sertifikasi",
+    "label": "Judul Ajakan Bertindak",
+    "type": "text"
+  },
+  {
+    "key": "sertifikasi_cta_subtitle",
+    "value": "Kami melayani uji kompetensi untuk perguruan tinggi, SMK, instansi, dan perusahaan — termasuk pendampingan persiapan sebelum ujian.",
+    "group": "sertifikasi",
+    "label": "Deskripsi Ajakan Bertindak",
+    "type": "textarea"
   }
 ]

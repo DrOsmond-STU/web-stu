@@ -20,6 +20,7 @@ export default async function SitemapPage() {
         { label: 'Beranda', href: '/' },
         { label: 'Tentang Kami', href: '/tentang-kami' },
         { label: 'Layanan', href: '/layanan' },
+        { label: 'Sertifikasi Kompetensi', href: '/sertifikasi' },
         { label: 'Proyek & Produk', href: '/proyek' },
         { label: 'Pengalaman Pekerjaan', href: '/pengalaman' },
         { label: 'Galeri Kegiatan', href: '/galeri' },
