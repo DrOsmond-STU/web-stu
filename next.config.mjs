@@ -14,6 +14,20 @@ const nextConfig = {
     ],
   },
   eslint: { ignoreDuringBuilds: true },
+  /*
+   * Build dijalankan dalam satu proses.
+   *
+   * Secara bawaan `next build` mem-fork satu worker per inti CPU untuk
+   * membuat halaman statis. Di shared hosting cPanel jumlah proses per akun
+   * dibatasi, dan ketika akun ini menjalankan beberapa aplikasi sekaligus,
+   * fork tersebut ditolak sistem dengan `spawn ... EAGAIN` sehingga build
+   * berhenti di tengah jalan. Situs ini hanya punya tiga halaman statis,
+   * jadi merender semuanya di proses utama praktis tanpa biaya waktu.
+   */
+  experimental: {
+    cpus: 1,
+    workerThreads: false,
+  },
   async headers() {
     return [
       {
