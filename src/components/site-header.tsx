@@ -7,7 +7,15 @@ import { useEffect, useState } from 'react';
 import { IconArrowRight, IconClose, IconMenu, IconPhone } from '@/components/icons';
 import { cn, whatsappLink } from '@/lib/utils';
 
-export type NavItem = { label: string; href: string };
+export type NavItem = {
+  label: string;
+  href: string;
+  /**
+   * Disembunyikan dari bar navigasi atas, tetapi tetap ada di menu layar
+   * kecil. Dipakai untuk tautan yang sudah terwakili tombol lain di bar.
+   */
+  barHidden?: boolean;
+};
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Beranda', href: '/' },
@@ -18,8 +26,13 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Pengalaman', href: '/pengalaman' },
   { label: 'Galeri', href: '/galeri' },
   { label: 'Berita', href: '/berita' },
-  { label: 'Kontak', href: '/kontak' },
+  // Di bar atas sudah diwakili tombol "Hubungi Kami". Tombol itu sendiri
+  // baru muncul mulai lebar sm, jadi di menu layar kecil tautan ini tetap
+  // ditampilkan agar halaman Kontak tidak kehilangan jalan masuk.
+  { label: 'Kontak', href: '/kontak', barHidden: true },
 ];
+
+const BAR_ITEMS = NAV_ITEMS.filter((item) => !item.barHidden);
 
 type Props = {
   logo: string;
@@ -103,7 +116,7 @@ export function SiteHeader({ logo, companyName, phone, whatsappNumber, whatsappM
           </Link>
 
           <nav className="hidden items-center gap-0.5 xl:flex">
-            {NAV_ITEMS.map((item) => (
+            {BAR_ITEMS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
