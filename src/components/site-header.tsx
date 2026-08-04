@@ -10,13 +10,16 @@ import { cn, whatsappLink } from '@/lib/utils';
 export type NavItem = {
   label: string;
   href: string;
-  /**
-   * Disembunyikan dari bar navigasi atas, tetapi tetap ada di menu layar
-   * kecil. Dipakai untuk tautan yang sudah terwakili tombol lain di bar.
-   */
-  barHidden?: boolean;
 };
 
+/*
+ * Tautan menu header.
+ *
+ * "Kontak" sengaja tidak ada di daftar ini — di header sudah ada tombol
+ * "Hubungi Kami" yang menuju halaman yang sama, jadi menampilkan keduanya
+ * hanya menggandakan tautan. Halamannya sendiri tetap ada dan tetap
+ * terhubung lewat tombol tersebut, footer, peta situs, dan sitemap.xml.
+ */
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Beranda', href: '/' },
   { label: 'Tentang Kami', href: '/tentang-kami' },
@@ -26,13 +29,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Pengalaman', href: '/pengalaman' },
   { label: 'Galeri', href: '/galeri' },
   { label: 'Berita', href: '/berita' },
-  // Di bar atas sudah diwakili tombol "Hubungi Kami". Tombol itu sendiri
-  // baru muncul mulai lebar sm, jadi di menu layar kecil tautan ini tetap
-  // ditampilkan agar halaman Kontak tidak kehilangan jalan masuk.
-  { label: 'Kontak', href: '/kontak', barHidden: true },
 ];
-
-const BAR_ITEMS = NAV_ITEMS.filter((item) => !item.barHidden);
 
 type Props = {
   logo: string;
@@ -103,7 +100,7 @@ export function SiteHeader({ logo, companyName, phone, whatsappNumber, whatsappM
             : 'border-b border-transparent bg-white/80 backdrop-blur-md',
         )}
       >
-        <div className="container-page flex h-[74px] items-center justify-between gap-4">
+        <div className="container-page flex h-[74px] items-center justify-between gap-3 sm:gap-4">
           <Link href="/" className="flex shrink-0 items-center" aria-label={companyName}>
             <Image
               src={logo}
@@ -111,12 +108,12 @@ export function SiteHeader({ logo, companyName, phone, whatsappNumber, whatsappM
               width={260}
               height={47}
               priority
-              className="h-9 w-auto sm:h-10"
+              className="h-8 w-auto sm:h-10"
             />
           </Link>
 
           <nav className="hidden items-center gap-0.5 xl:flex">
-            {BAR_ITEMS.map((item) => (
+            {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -135,15 +132,26 @@ export function SiteHeader({ logo, companyName, phone, whatsappNumber, whatsappM
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
-            <Link href="/kontak" className="btn-primary hidden !px-5 !py-2.5 text-[13px] sm:inline-flex">
-              Hubungi Kami
-              <IconArrowRight className="h-4 w-4" />
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/*
+             * Satu-satunya tautan ke halaman Kontak di header, jadi tombol ini
+             * tampil di semua lebar layar. Di bawah lebar sm ruang header tidak
+             * cukup untuk teksnya, sehingga yang tampil hanya ikon telepon —
+             * `aria-label` menjaga tombol tetap terbaca pembaca layar.
+             */}
+            <Link
+              href="/kontak"
+              aria-label="Hubungi Kami"
+              className="btn-primary !px-3 !py-2.5 text-[13px] sm:!px-5"
+            >
+              <IconPhone className="h-4 w-4 sm:hidden" />
+              <span className="hidden sm:inline">Hubungi Kami</span>
+              <IconArrowRight className="hidden h-4 w-4 sm:inline" />
             </Link>
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-xl border-2 border-ink-200 text-ink-800 transition-colors hover:border-brand-400 hover:text-brand-700 xl:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border-2 border-ink-200 text-ink-800 transition-colors hover:border-brand-400 hover:text-brand-700 sm:h-11 sm:w-11 xl:hidden"
               aria-label={open ? 'Tutup menu' : 'Buka menu'}
               aria-expanded={open}
             >
