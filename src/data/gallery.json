@@ -1,0 +1,14 @@
+[
+  { "title": "Pelatihan COBIT, ITIL, CDCP & Lead Auditor", "caption": "Kegiatan pelatihan tata kelola TI bersama tim dan peserta dari instansi klien.", "image": "/images/docs/doc-01.jpg", "category": "Pelatihan", "sort_order": 1 },
+  { "title": "Pelatihan Sistem Manajemen", "caption": "Sesi pelatihan awareness sistem manajemen bagi unit kerja klien.", "image": "/images/docs/doc-02.jpg", "category": "Pelatihan", "sort_order": 2 },
+  { "title": "Pendampingan Audit Sertifikasi", "caption": "Pendampingan audit dan sertifikasi ISO 27001, 20000-1, dan 9001.", "image": "/images/docs/doc-03.jpg", "category": "Pelatihan", "sort_order": 3 },
+  { "title": "Sesi Pendampingan Implementasi", "caption": "Pendampingan penerapan sistem manajemen di lingkungan kerja klien.", "image": "/images/docs/doc-04.jpg", "category": "Pelatihan", "sort_order": 4 },
+  { "title": "Pendampingan Ditjen Dukcapil — Program E-KTP", "caption": "Pendampingan audit dan sertifikasi ISO 27001, 20000-1, dan 9001 di Kementerian Dalam Negeri.", "image": "/images/docs/doc-05.jpg", "category": "Sertifikasi ISO", "sort_order": 5 },
+  { "title": "Pendampingan Kementerian Agama — Ditjen Bimas Islam", "caption": "Pendampingan audit dan sertifikasi ISO 27001 pada Direktorat Jenderal Bimas Islam.", "image": "/images/docs/doc-06.jpg", "category": "Sertifikasi ISO", "sort_order": 6 },
+  { "title": "Penyerahan Hasil Pendampingan Sertifikasi", "caption": "Dokumentasi penyerahan hasil pendampingan sertifikasi kepada klien.", "image": "/images/docs/doc-07.jpg", "category": "Sertifikasi ISO", "sort_order": 7 },
+  { "title": "Rapat Koordinasi Implementasi", "caption": "Koordinasi lintas unit kerja dalam penerapan sistem manajemen.", "image": "/images/docs/doc-08.jpg", "category": "Sertifikasi ISO", "sort_order": 8 },
+  { "title": "Implementasi ISO — Dinas Sosial Kota Sukabumi", "caption": "Kegiatan implementasi sistem manajemen di Dinas Sosial Kota Sukabumi.", "image": "/images/docs/doc-09.jpg", "category": "Implementasi ISO", "sort_order": 9 },
+  { "title": "Implementasi ISO — Dinas Sosial Kota Sukabumi", "caption": "Sesi pendampingan bersama jajaran Dinas Sosial Kota Sukabumi.", "image": "/images/docs/doc-10.jpg", "category": "Implementasi ISO", "sort_order": 10 },
+  { "title": "Implementasi ISO — Bakesbangpol Kota Bandung", "caption": "Kegiatan implementasi sistem manajemen di Bakesbangpol Kota Bandung.", "image": "/images/docs/doc-11.jpg", "category": "Implementasi ISO", "sort_order": 11 },
+  { "title": "Assessment Data Center E-KTP", "caption": "Pelaksanaan assessment fasilitas data center program E-KTP.", "image": "/images/docs/doc-12.jpg", "category": "Implementasi ISO", "sort_order": 12 }
+]
