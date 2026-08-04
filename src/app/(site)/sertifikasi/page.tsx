@@ -57,7 +57,12 @@ export default async function CertificationPage() {
     getCertificateProofs(),
   ]);
 
-  const showFee = settings.sertifikasi_tampilkan_biaya !== 'false';
+  /*
+   * Biaya ujian tidak ditampilkan ke publik kecuali dinyalakan sendiri dari
+   * CMS. Bawaannya mati, sehingga instalasi baru maupun baris pengaturan yang
+   * hilang tidak akan membocorkan daftar harga tanpa disengaja.
+   */
+  const showFee = settings.sertifikasi_tampilkan_biaya === 'true';
 
   const internasional = certifications.filter((c) => c.scheme !== 'nasional');
   const nasional = certifications.filter((c) => c.scheme === 'nasional');

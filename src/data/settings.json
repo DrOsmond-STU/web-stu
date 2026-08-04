@@ -488,11 +488,11 @@
   },
   {
     "key": "sertifikasi_tampilkan_biaya",
-    "value": "true",
+    "value": "false",
     "group": "sertifikasi",
     "label": "Tampilkan Biaya Ujian",
     "type": "boolean",
-    "hint": "Matikan bila daftar biaya tidak ingin ditampilkan ke publik."
+    "hint": "Bawaannya mati. Nyalakan hanya bila daftar biaya memang ingin ditampilkan ke publik."
   },
   {
     "key": "sertifikasi_katalog_title",
@@ -503,7 +503,7 @@
   },
   {
     "key": "sertifikasi_katalog_note",
-    "value": "Biaya di bawah adalah biaya ujian per skema dan dapat berubah sewaktu-waktu mengikuti ketentuan penerbit. Hubungi kami untuk penawaran kelas atau kuota institusi.",
+    "value": "Setiap skema memiliki ketentuan ujian dan masa berlaku sesuai kebijakan penerbitnya. Hubungi kami untuk informasi jadwal, biaya, serta penawaran kelas dan kuota institusi.",
     "group": "sertifikasi",
     "label": "Catatan di Bawah Katalog",
     "type": "textarea"
