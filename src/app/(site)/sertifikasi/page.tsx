@@ -69,6 +69,7 @@ export default async function CertificationPage() {
 
   const vendors = new Set(certifications.map((c) => c.vendor).filter(Boolean)).size;
   const fields = new Set(certifications.map((c) => c.field).filter(Boolean)).size;
+  const bidangNasional = new Set(nasional.map((c) => c.field).filter(Boolean)).size;
 
   const mitraInternasional: Mitra[] = [
     { name: settings.sertifikasi_intl_partner_1_name, url: settings.sertifikasi_intl_partner_1_url },
@@ -84,7 +85,7 @@ export default async function CertificationPage() {
     { label: 'Skema Sertifikasi', value: String(certifications.length), hint: 'Internasional & nasional' },
     { label: 'Penerbit Sertifikat', value: String(vendors), hint: 'Microsoft, Cisco, Adobe, PASAS, dan lainnya' },
     { label: 'Bidang Keahlian', value: String(fields), hint: 'Dari TI hingga bisnis & desain' },
-    { label: 'Jalur Sertifikasi', value: nasional.length > 0 ? '2' : '2', hint: 'Certiport/PASAS & BNSP' },
+    { label: 'Skema BNSP', value: String(nasional.length), hint: 'Berlisensi BNSP, diakui nasional' },
   ];
 
   const jsonLd = {
@@ -211,6 +212,12 @@ export default async function CertificationPage() {
                   </div>
                 </div>
               ) : null}
+
+              {settings.sertifikasi_bnsp_lisensi ? (
+                <p className="mt-4 rounded-xl border border-ink-100 bg-ink-50/70 px-4 py-3 text-[12.5px] leading-relaxed text-ink-600">
+                  {settings.sertifikasi_bnsp_lisensi}
+                </p>
+              ) : null}
             </article>
           </div>
         </div>
@@ -247,7 +254,7 @@ export default async function CertificationPage() {
               align="left"
               eyebrow="BNSP"
               title="Skema sertifikasi nasional"
-              description="Skema kompetensi berlisensi BNSP yang dapat diikuti melalui kami."
+              description={`${nasional.length} skema kompetensi berlisensi BNSP dalam ${bidangNasional} bidang keahlian, diselenggarakan bersama ${settings.sertifikasi_bnsp_partner_name || 'mitra LSP kami'}.`}
               className="max-w-2xl"
             />
             <div className="mt-12">

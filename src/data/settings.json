@@ -487,6 +487,14 @@
     "type": "text"
   },
   {
+    "key": "sertifikasi_bnsp_lisensi",
+    "value": "Lisensi BNSP No. BNSP-LSP-2121-ID, Surat Keputusan KEP.0868/BNSP/IV/2022 tanggal 25 April 2022, berlaku hingga 25 April 2027.",
+    "group": "sertifikasi",
+    "label": "Keterangan Lisensi BNSP",
+    "type": "textarea",
+    "hint": "Nomor lisensi mitra LSP. Kosongkan bila tidak ingin ditampilkan."
+  },
+  {
     "key": "sertifikasi_tampilkan_biaya",
     "value": "false",
     "group": "sertifikasi",
